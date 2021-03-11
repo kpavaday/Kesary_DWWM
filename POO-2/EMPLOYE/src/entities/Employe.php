@@ -101,4 +101,21 @@ class Employe{
 
     }
 
+    //Méthode calcul prime annuelle
+    public function primeAnnuelle(){
+        return  $this->getSalaire() * 5/100;
+        
+    }
+
+    //Versement prime
+    public function versementPrime(){
+        if(date("d/m")=="11/03"){
+            echo "Votre primme annuelle est de : ". primeAnnuelle(). " € cette année.";
+        }
+        //Calcul versement de la prime
+/*if(date("d/m")=="11/03"){
+    echo "coucou";
+}*/
+    }
+
 }
