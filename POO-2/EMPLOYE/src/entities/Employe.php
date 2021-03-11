@@ -57,14 +57,14 @@ class Employe{
      */
     public function toString(){
 
- 
-        return "Employé 1 :  \n".
-        "Nom : ".$this->getNom(). "\n".
-        "Prénom : " .$this->getPrenom()."\n". 
+        $affichage = "\n\n***** SALARIE *****\n";
+        $affichage = "Prénom : " .$this->getPrenom()."\n".
+        "Nom : ".$this->getNom(). "\n". 
         "Date d'embauche : " .$this->getdateEmbauche()->format("d/m/y"). "\n".
         "Fonction : ".$this->getFonction()."\n". 
         "Salaire : " .$this->getSalaire(). " €\n".
-        "Service :".$this->getService();
+        "Service :".$this->getService(). " \n";
+        return $affichage;
     }
 
     /**
@@ -100,22 +100,5 @@ class Employe{
         //echo $interval->format("%m")."mois";
 
     }
-
-    //Méthode calcul prime annuelle
-    public function primeAnnuelle(){
-        return  $this->getSalaire() * 5/100;
-        
-    }
-
-    //Versement prime
-    public function versementPrime(){
-        if(date("d/m")=="11/03"){
-            echo "Votre primme annuelle est de : ". primeAnnuelle(). " € cette année.";
-        }
-        //Calcul versement de la prime
-/*if(date("d/m")=="11/03"){
-    echo "coucou";
-}*/
-    }
-
+       
 }
