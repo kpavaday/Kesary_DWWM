@@ -1,4 +1,8 @@
 <?php
+function chargementClass($class){
+    require('./entities/'.$class.'.php');
+}
+spl_autoload_register('chargementClass');
 
     class test
     {
@@ -9,15 +13,7 @@
         private $_age;
     
         /*****************Accesseurs***************** */
-        public function setNom($nom){
-            $this->_nom=$nom;
-        }
-        public function setPrenom($prenom){
-            $this->_prenom=$prenom;
-        }
-        public function setAge($age){
-            $this->_age=$age;
-        }
+        
         
         /*****************Constructeur***************** */
     
@@ -76,5 +72,14 @@
         public static function compareTo($obj1, $obj2)
         {
             return 0;
+        }
+
+
+        public function getNom(){
+                return $this->_nom;
+        }
+
+        public function setNom($nom){
+                $this->_nom = $nom;
         }
     }
