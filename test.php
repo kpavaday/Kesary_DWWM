@@ -15,6 +15,9 @@
         public function setPrenom($prenom){
             $this->_prenom=$prenom;
         }
+        public function setAge($age){
+            $this->_age=$age;
+        }
         
         /*****************Constructeur***************** */
     
