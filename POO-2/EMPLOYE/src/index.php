@@ -20,6 +20,8 @@ function afficheTableau($tab)
             echo " \n";
             echo "*********************************************\n";
     }
+    echo "*********************************************\n";
+    echo "L'entreprise compte parmi ses effectifs : ".count($tab). " salariés";
 }
 
  $listeEmploye[] = new Employe(["nom"=>"Deloin","prenom"=>"Alain","dateEmbauche"=>new DateTime("2018-11-15"),"fonction"=>"Technicien","salaire"=>"25000","service"=>"Commercial"]);
@@ -36,8 +38,7 @@ function affichageAnciennete($tab){
     for ($i=0; $i < count($tab); $i++) { 
         echo $tab[$i]->anciennete();
         echo "\n";
-    }
-    
+    }   
 }
 
 

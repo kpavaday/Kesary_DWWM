@@ -9,6 +9,7 @@ class Employe{
     private $_fonction;
     private $_salaire;
     private $_service;
+    private static $_compteur = 0;
 
     /*****************Accesseurs***************** */
     public function getNom(){return $this->_nom;}
@@ -17,6 +18,7 @@ class Employe{
     public function getFonction(){return $this->_fonction;}
     public function getSalaire(){return $this->_salaire;}
     public function getService(){return $this->_service;}
+    public function getCompteur(){return self::$_compteur;}
 
 
     public function setNom($nom){$this->_nom = $nom;}
@@ -35,6 +37,7 @@ class Employe{
         {
             $this->hydrate($options);
         }
+        self::$_compteur++;
     }
     public function hydrate($data)
     {
@@ -95,10 +98,20 @@ class Employe{
     //Méthode calcul de l'ancienneté de l'employé
     public function anciennete(){
         $interval=$this->getDateEmbauche()->diff(new datetime("NOW"));
-        echo "L'employé 1 :".$this->getNom(). " ". $this->getPrenom(). " a ".$interval->format("%y"). " ans et ". $interval->format("%m"). " mois d'ancienneté.";
-        //echo $interval->format("%y")."ans\n";
-        //echo $interval->format("%m")."mois";
-
+        echo "Ancienneté : ". $interval->format("%y"). " ans et ". $interval->format("%m"). " mois \n";
     }
+
+    /**
+     * fonction qui calcul la prime globale
+     *
+     * @return int renvoi le montant de la prime
+     */
+    public function prime(){
+        //Calcul de la prime sur salaire
+        
+    }
+
+
+
        
 }
