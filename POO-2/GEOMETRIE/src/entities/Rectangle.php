@@ -106,14 +106,20 @@ public function hydrate($data)
      */
 
     public function estCarre(){
-        return ($this->getLargeur() == $this->getLongueur()) {    
+        return ($this->getLargeur() == $this->getLongueur());  
         }
 
+/**
+     * Affiche les propriétés du rectangle
+     *
+     * @return void
+     */
     
-    
-    public functio AfficherRectangle(){
+    public function AfficherRectangle(){
         echo $this->toString();
     }
+
+
     }
 
         
@@ -132,4 +138,4 @@ public function hydrate($data)
 
 
 
-}
+

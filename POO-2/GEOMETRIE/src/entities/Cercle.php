@@ -87,7 +87,17 @@ public function hydrate($data)
      * @return float
      */
     public function aireCercle(){
-        return pi *((($this->getDiametre()/2) * ($this->getDiametre()/2)));
+        return pi() * (pow($this->getDiametre()/2,2));
+    }
+
+/**
+     * Affiche les propriétés du rectangle
+     *
+     * @return void
+     */
+    
+    public function AfficherCercle(){
+        echo $this->toString();
     }
 
 

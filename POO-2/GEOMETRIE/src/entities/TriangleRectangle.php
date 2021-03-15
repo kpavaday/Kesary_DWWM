@@ -83,8 +83,9 @@ public function hydrate($data)
 
     public function perimetreTriRec(){
 
-        return  $this->getBase() + $this->getHauteur() + (sqrt($this->getBase()*$this->getBase()+ $this->getHauteur()*$this->getHauteur()));
-         
+        $hypothenuse = sqrt(pow($this->getBase(),2) + pow($this->getHauteur(),2));
+        $perimetre = $this->getBase()+ $this->getHauteur() + $hypothenuse;
+        return $perimetre ;    
     }
 
     /**
@@ -95,6 +96,16 @@ public function hydrate($data)
 
     public function aireTriRec(){
         return ($this->getBase() * $this->getHauteur()) / 2;
+    }
+
+/**
+     * Affiche les propriétés du rectangle
+     *
+     * @return void
+     */
+    
+    public function AfficherTriangle(){
+        echo $this->toString();
     }
 
     
