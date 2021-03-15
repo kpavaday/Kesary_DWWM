@@ -42,7 +42,7 @@ class Enfant{
      * @return String
      */
     public function toString(){
-        return "Nom de l'enfant :" . $this->getNom() . "Prenom d'enfant :" . $this->getPrenom() . "Age :" . $this->getAge()."\n";
+        return "Nom de l'enfant :" . $this->getNom() . "\nPrenom d'enfant :" . $this->getPrenom() . "\nAge :" . $this->getAge()."\n";
     }
 
     /**
@@ -63,7 +63,7 @@ class Enfant{
      *
      * @param [type] $obj1
      * @param [type] $obj2
-     * @return void
+     * @return int
      */
     public static function compareTo($obj1, $obj2){
         return 0;
