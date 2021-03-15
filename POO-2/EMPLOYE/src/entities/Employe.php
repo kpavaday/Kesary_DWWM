@@ -10,6 +10,8 @@ class Employe{
     private $_salaire;
     private $_service;
     private static $_compteur = 0;
+    private $_agence;
+    private $_nbreEnfants = [];
 
     /*****************Accesseurs***************** */
     public function getNom(){return $this->_nom;}
@@ -18,7 +20,9 @@ class Employe{
     public function getFonction(){return $this->_fonction;}
     public function getSalaire(){return $this->_salaire;}
     public function getService(){return $this->_service;}
-    public function getCompteur(){return self::$_compteur;}
+    public static function getCompteur(){return self::$_compteur;}
+    public function getAgence(){return $this->_agence;}
+    public function getNbreEnfants(){return $this->_nbreEnfants;}
 
 
     public function setNom($nom){$this->_nom = $nom;}
@@ -27,6 +31,10 @@ class Employe{
     public function setFonction($fonction){$this->_fonction = $fonction;}
     public function setSalaire($salaire){$this->_salaire = $salaire;}
     public function setService($service){$this->_service = $service;}
+    public function setNbreEnfants(array $nbreEnfants){$this->_nbreEnfants = $nbreEnfants;}
+
+    //On force le paramètre $agence a être de type Agence
+    public function setAgence(Agence $agence){$this->_agence = $agence;}
 
     
     /*****************Constructeur***************** */
@@ -61,12 +69,16 @@ class Employe{
     public function toString(){
 
         $affichage = "\n\n***** SALARIE *****\n";
-        $affichage = "Prénom : " .$this->getPrenom()."\n".
+        $affichage .= "Prénom : " .$this->getPrenom()."\n".
         "Nom : ".$this->getNom(). "\n". 
         "Date d'embauche : " .$this->getdateEmbauche()->format("d/m/y"). "\n".
         "Fonction : ".$this->getFonction()."\n". 
         "Salaire : " .$this->getSalaire(). " €\n".
         "Service :".$this->getService(). " \n";
+        //$affichage = "Prime totale : ". $this->prime(). " €\n";
+        $affichage .= "Affectation agence : " . $this->getAgence()->toString() ."\n";
+        $affichage .= $this->chequesVancances() ? "Salarié elligible aux chèques vacances \n " : "Salarié non elligible aux chèques vacances \n";
+        $affichage .= "Enfants :\n" . $this->enfants();
         return $affichage;
     }
 
@@ -90,25 +102,113 @@ class Employe{
      * @param [type] $obj2
      * @return void
      */
-    public static function compareTo($obj1, $obj2)
-    {
+    public static function compareTo($obj1, $obj2){
+        if ($obj1->getNom() > $obj2->getNom()){
+            return 1;
+        }elseif ($obj1->getNom() < $obj2->getNom()){
+            return -1;
+        }elseif ($obj1->getPrenom() > $obj2->getPrenom()){
+            return 1;
+        }elseif($obj1->getPrenom() < $obj2->getPrenom()){
+            return -1;
+        }else{
+            return 0;
+        }    
+    }
+
+    //Comparaison avec concaténation
+    public static function compareTo2($obj1,$obj2){
+        $objA = $obj1->getNom() . $obj1->getPrenom();
+        $objB = $obj2->getNom() . $obj2->getPrenom();
+        if ($objA > $objB) {
+            return 1;
+        }if ($objA < $objB) {
+            return -1;
+        }
         return 0;
     }
 
-    //Méthode calcul de l'ancienneté de l'employé
-    public function anciennete(){
-        $interval=$this->getDateEmbauche()->diff(new datetime("NOW"));
-        echo "Ancienneté : ". $interval->format("%y"). " ans et ". $interval->format("%m"). " mois \n";
+    //Comparaison des services
+    public static function compareToService($obj1,$obj2){
+        if ($obj1->getService() > $obj2->getService()){
+            return 1;
+        }elseif ($obj1->getService() < $obj2->getService()){
+            return -1;
+        }else {//si les services sont les mêmes, on rappelle la fonction de tri par Nom et Prénom
+            return self::compareTo($obj1,$obj2);
+        }
     }
 
+
     /**
-     * fonction qui calcul la prime globale
-     *
-     * @return int renvoi le montant de la prime
-     */
-    public function prime(){
-        //Calcul de la prime sur salaire
+ * calcul l'anciennete en année
+ *
+ * @return int  nb d'année d'ancienneté
+ */
+    //Méthode calcul de l'ancienneté de l'employé
+    public function anciennete(){
+        $anciennete=$this->getDateEmbauche()->diff(new DateTime("NOW"));
+        return $anciennete->format("%y"). " ans et ".$anciennete->format("%m"). " mois\n";
+    }
+
+/**
+ * applique 5% du salaire
+ *
+ * @return float  montant de la prime annuelle
+ */
+    public function primeAnnuelle(){
+        //Calcul de la prime sur salaire de 5%
+        return $this->getSalaire() *  0.05;
         
+    }
+/**
+ * prime de 2% du salaire par annee d'ancienneté
+ *
+ * @return float montant de la prime
+ */
+    public function primeAnciennete(){
+        //Calcul de la prime d'ancienneté de 2%
+        $primeAnciennete = $this->getSalaire() * 2/100 * $this->anciennete();
+        return $primeAnciennete;
+    }
+
+/**
+ * fonction qui calcul la prime globale
+ *
+ * @return float renvoi le montant de la prime
+ */
+    public function prime(){
+        //Prime annuelle sur salaire
+        $primeSalaire = $this->primeAnnuelle();
+
+        //Prime par année d'ancienneté
+        $primeAnciennete = $this->primeAnciennete();
+        return $primeSalaire + $primeAnciennete;
+    }
+
+/**
+ * Calcul de la masse salariale de l'employe
+ * Calcul du salaire + prime
+ * @return double salaire + prime
+ */
+    public function masseSalariale(){
+        return $this->getSalaire()+ $this->prime();
+    }
+
+    //Vérification si l'employé peut avoir des chèques vacances
+    public function chequesVancances(){
+        return $this->anciennete() >= 1;
+    }
+
+    //Vérification si l'employé a des enfants, si 0 enfant un message s'affiche, sinon boucle sur les enfants et affiche les infos
+    public function enfants(){
+        if(count($this->getNbreEnfants()) < 0){
+            echo "L'employé n'a pas d'enfant \n";
+        }else{
+            foreach($this->getNbreEnfants() as $enfant){
+                $enfant->toString();
+            }
+        }
     }
 
 
