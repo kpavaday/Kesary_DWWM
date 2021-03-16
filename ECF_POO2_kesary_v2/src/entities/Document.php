@@ -5,13 +5,16 @@ class Document{
     /*****************Attributs***************** */
     private $_auteur;
     private $_titre;
+    private $_emprunte = false;
 
     /*****************Accesseurs***************** */
     public function getAuteur(){return $this->_auteur;}
     public function getTitre(){return $this->_titre;}
+    public function getEmprunte(){return $this->_emprunte;}
 
-    public function setAuteur($auteur){$this->_auteur = $auteur;}
+    public function setAuteur(Auteur $auteur){$this->_auteur = $auteur;} //Ici va mettre un objet de la classe Auteur
     public function setTitre($titre){$this->_titre = $titre;}
+    public function setEmprunte(bool $emprunte){$this->_emprunte = $emprunte;}
 
 
     
@@ -47,7 +50,8 @@ class Document{
         $affichage = "Document : \n";
         $affichage .= "Titre : ". $this->getTitre(). "\n";
         //$affichage .= "Disponibilité : ". $this->getEmprunt(). "\n";
-        $affichage .= "Auteur : ". $this->getAuteur() ;
+        $affichage .= "Auteur : \n". $this->getAuteur()->toString()."\n" ;
+        $affichage .= $this->getEmprunte()? "Le document est emprunté \n": "Le document n'est pas emprunté \n";
         //$affichage .= "Le nom de l'auteur est le même que le titre : ". $this->equalsTo($this->getAuteur())? "Oui \n" : "Non \n";
         return $affichage;
     }
@@ -59,7 +63,9 @@ class Document{
      * @return bool
      */
     public function equalsTo($obj){
-        return true;
+
+        return (($obj->getTitre() == $this->getTitre()) && ($obj->getAuteur() == $this->getAuteur()));
+       
     }
     /**
      * Compare 2 objets
@@ -74,6 +80,16 @@ class Document{
     public static function compareTo($obj1, $obj2)
     {
         return 0;
+    }
+
+    /**
+     * Permet de marquer comme emprunté ou non un document
+     *retourne true si le doc est emprunté false sinon
+     * 
+     * @return bool
+     */
+    public function estEmprunte(){
+        return $this->getEmprunte();
     }
 
     
