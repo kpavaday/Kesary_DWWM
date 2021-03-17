@@ -37,7 +37,7 @@ class Auteur{
              }
          }
      }
-      /*****************Autres Méthodes***************** */
+    /*****************Autres Méthodes***************** */
     
     /**
      * Transforme l'objet en chaine de caractères
@@ -48,8 +48,9 @@ class Auteur{
         $affichage  = "Prénom : ". $this->getPrenom(). "\n";
         $affichage .= "Nom : ". $this->getNom(). "\n";
         $affichage .= "Date de naissance : ". $this->getDateNaissance()->format("Y-m-d"). "\n";
-        $affichage .= "Date de décès : ". $this->getDateDeces()->format("Y-m-d"). "\n";
-        $affichage .=  $this->estVivant()? "L'auteur vie toujours" : "L'auteur est mort";
+       // $affichage .= "Date de décès : ". $this->getDateDeces()->format("Y-m-d"). "\n";
+    
+        $affichage .=  $this->estVivant()? "L'auteur vie toujours" : "Il est mort". "\n";
         return $affichage;
     }
 
@@ -59,8 +60,7 @@ class Auteur{
      * @param [type] $obj
      * @return bool
      */
-    public function equalsTo($obj)
-    {
+    public function equalsTo($obj){
         return true;
     }
 
@@ -74,8 +74,7 @@ class Auteur{
      * @param [type] $obj2
      * @return void
      */
-    public static function compareTo($obj1, $obj2)
-    {
+    public static function compareTo($obj1, $obj2){
         return 0;
     }
 
@@ -86,7 +85,7 @@ class Auteur{
      * @return bool
      */
     public function estVivant(){
-        if(!($this->getDateDeces()))
+        if($this->getDateDeces())
         return true;
     }
 
