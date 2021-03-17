@@ -8,6 +8,8 @@ class Maison extends Batiment{
 
     public function setNbPieces($nbPieces){$this->_nbPieces = $nbPieces;}
 
+    
+
     public function __construct(array $options = []){
         parent::__construct($options);
     if (!empty($options)) // empty : renvoi vrai si le tableau est vide

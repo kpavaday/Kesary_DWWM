@@ -37,7 +37,7 @@ class Auteur{
              }
          }
      }
-    /*****************Autres Méthodes***************** */
+      /*****************Autres Méthodes***************** */
     
     /**
      * Transforme l'objet en chaine de caractères
@@ -48,9 +48,8 @@ class Auteur{
         $affichage  = "Prénom : ". $this->getPrenom(). "\n";
         $affichage .= "Nom : ". $this->getNom(). "\n";
         $affichage .= "Date de naissance : ". $this->getDateNaissance()->format("Y-m-d"). "\n";
-       // $affichage .= "Date de décès : ". $this->getDateDeces()->format("Y-m-d"). "\n";
-        $affichage .=  $this->estVivant()? "L'auteur vie toujours\n" : "Il est mort". "\n";
-       // $affichage .=  $this->compareTo()? "Les documents sont égaux \n": "Les documents ne sont égaux\n";
+        $affichage .= "Date de décès : ". $this->getDateDeces()->format("Y-m-d"). "\n";
+        $affichage .=  $this->estVivant()? "L'auteur vie toujours" : "L'auteur est mort";
         return $affichage;
     }
 
@@ -60,7 +59,8 @@ class Auteur{
      * @param [type] $obj
      * @return bool
      */
-    public function equalsTo($obj){
+    public function equalsTo($obj)
+    {
         return true;
     }
 
@@ -74,12 +74,9 @@ class Auteur{
      * @param [type] $obj2
      * @return void
      */
-
-    public static function compareTo(Document $obj1,Document $obj2){
-
-        if($obj1->getTitre() == $obj2->getTitre()){
-            return 0;
-        }    
+    public static function compareTo($obj1, $obj2)
+    {
+        return 0;
     }
 
     /**
@@ -89,7 +86,7 @@ class Auteur{
      * @return bool
      */
     public function estVivant(){
-        if($this->getDateDeces())
+        if(!($this->getDateDeces()))
         return true;
     }
 

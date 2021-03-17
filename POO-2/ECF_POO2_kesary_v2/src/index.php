@@ -10,7 +10,8 @@ spl_autoload_register('chargementClass');
  * @param [type] $tab tableau à afficher
  * @return void
  */
-function afficheTableau($tab){
+function afficheTableau($tab)
+{
     for ($i=0; $i < count($tab); $i++) { 
         echo $tab[$i]->toString();
         echo "************************************************\n";
@@ -25,8 +26,7 @@ $auteur3=new Auteur(["nom"=>"Orwell","prenom"=>"Georges","dateNaissance"=>new Da
 //Liste des documents
 $listeDoc[] = new Document (["titre"=>"Les Misérables","auteur"=>$auteur1]);
 $listeDoc[] = new Document (["titre"=>"Le grand secret","auteur"=>$auteur2]);
-$listeDoc[] = new Document (["titre"=>"1984","auteur"=>$auteur3,""]);
-$listeDoc1 = new Document (["titre"=>"Les Misérables","auteur"=>$auteur1]);
+$listeDoc[] = new Document (["titre"=>"1984","auteur"=>$auteur3]);
 //afficheTableau($listeDoc); //Afficher la liste des document
 $listeDoc[0]->setEmprunte(true); //Ici le livre est emprunté
 //afficheTableau($listeDoc);
@@ -39,12 +39,6 @@ afficheTableau($listeDoc);
 echo "Le paramètre est un document identique à l'objet : ";
 echo $listeDoc[1]->equalsTo($listeDoc[0])? "Oui \n" : "Non \n";
 
-//Liste Liste
-$listeLivre[] = new Livre(["titre"=>"Les Misérables","auteur"=>$auteur1,"nbPages"=>"200"]);
-afficheTableau($listeLivre);
 
-
-
-
-
+//echo $listeDoc[1]->toString();
 
