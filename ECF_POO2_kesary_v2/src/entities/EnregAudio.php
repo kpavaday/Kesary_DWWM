@@ -2,10 +2,12 @@
 
 class EnregAudio extends Document{
     /*****************Attributs***************** */
-    private $_xxx;
+    private $_duree;
 
     /*****************Accesseurs***************** */
+    public function getDuree(){return $this->_duree;}
 
+    public function setDuree($duree){$this->_duree = $duree;}
     
     /*****************Constructeur***************** */
 
@@ -37,7 +39,8 @@ class EnregAudio extends Document{
      */
     public function toString()
     {
-        return "";
+        $affichage = parent::toString(). "\n" . "La durée du document audio : ". $this->getDuree(). "mn\n";
+        return $affichage;
     }
 
     /**
@@ -65,4 +68,6 @@ class EnregAudio extends Document{
         return 0;
     }
 
+
+    
 }

@@ -13,8 +13,8 @@ spl_autoload_register('chargementClass');
 function afficheTableau($tab){
     for ($i=0; $i < count($tab); $i++) { 
         echo $tab[$i]->toString();
-        echo "************************************************\n";
     }
+    echo "************************************************\n";
 }
 
 $auteur1=new Auteur(["nom"=>"Hugo","prenom"=>"Victor","dateNaissance"=>new DateTime("1802-02-26"),"dateDeces"=>new DateTime("1885-05-22")]);
@@ -40,8 +40,17 @@ echo "Le paramètre est un document identique à l'objet : ";
 echo $listeDoc[1]->equalsTo($listeDoc[0])? "Oui \n" : "Non \n";
 
 //Liste Liste
-$listeLivre[] = new Livre(["titre"=>"Les Misérables","auteur"=>$auteur1,"nbPages"=>"200"]);
+$listeLivre[] = new Livre(["titre"=>"Les Misérables","auteur"=>$auteur1,"nbPages"=>150]);
 afficheTableau($listeLivre);
+
+//liste vidéo
+$listeVideo[] = new video(["titre"=>"Les Misérables","auteur"=>$auteur1,"sousTitre"=>"Oui"]);
+afficheTableau($listeVideo);
+
+//liste audio
+$listeAudio[] = new EnregAudio(["titre"=>"Les Misérables","auteur"=>$auteur1,"sousTitre"=>15]);
+afficheTableau($listeAudio);
+
 
 
 

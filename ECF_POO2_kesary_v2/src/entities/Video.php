@@ -2,11 +2,14 @@
 
 class Video extends Document{
     /*****************Attributs***************** */
-    private $_xxx;
+    private $_sousTitre;
 
     /*****************Accesseurs***************** */
+    public function getSousTitre(){return $this->_sousTitre;}
 
-    
+    public function setSousTitre($sousTitre){$this->_sousTitre = $sousTitre;}
+
+ 
     /*****************Constructeur***************** */
 
     public function __construct(array $options = []){
@@ -35,9 +38,10 @@ class Video extends Document{
      *
      * @return String
      */
-    public function toString()
-    {
-        return "";
+    public function toString(){
+
+        $affichage = parent::toString(). "\n" . "Vidéo sous-titrée : ". $this->getSousTitre(). "\n";
+        return $affichage;
     }
 
     /**
@@ -65,4 +69,8 @@ class Video extends Document{
         return 0;
     }
 
+
+
+
+  
 }

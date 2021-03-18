@@ -41,6 +41,7 @@ class Livre extends Document{
     public function toString(){
 
         $affichage = parent::toString(). "\n" . "Nombre de pages : ". $this->getNbPages(). " pages\n";
+        return $affichage;
     }
 
     /**
