@@ -6,27 +6,28 @@ USE soldat;
 
 DROP TABLE IF EXISTS soldat;
 
-CREATE TABLE IF NOT EXISTS soldat(
+CREATE TABLE IF NOT EXISTS Soldat(
     idsoldat int not null auto_increment PRIMARY KEY,
-    nom varchar(30) not null,
-    prenom varchar (30) not null,
-    adresse varchar (50) not null,
-    codePostal varchar (20) not null,
-    dateDeces Date not null
+    nom varchar(30),
+    prenom varchar (30),
+    adresse varchar (50),
+    codePostal varchar (20),
+    dateDeces Date 
 )ENGINE = INNODB;
 
 
 CREATE TABLE IF NOT EXISTS bataille(
-    idBataille int not null auto_increment PRIMARY KEY,
-    libelleBataille varchar(30) not null,
+    idBataille int  auto_increment not null PRIMARY KEY,
+    libelleBataille varchar(250) not null,
     lieuBataille varchar (30) not null,
     dateDebutBataille Date not null,
     dateFinBataille Date not null
 )ENGINE = INNODB;
 
 CREATE TABLE IF NOT EXISTS unite(
-    idUnite int not null auto_increment PRIMARY KEY,
-    libelleUnite varchar (30) not null
+    idUnite int auto_increment not null PRIMARY KEY,
+    libelleUnite varchar (250) not null,
+    infoUnite varchar (250)
 )ENGINE = INNODB;
 
 CREATE TABLE IF NOT EXISTS blessure(
@@ -36,9 +37,9 @@ CREATE TABLE IF NOT EXISTS blessure(
     lieuBlessure varchar (30) not null
 )ENGINE = INNODB;
 
-CREATE TABLE IF NOT EXISTS grade(
-    idGrade int not null auto_increment PRIMARY KEY,
-    libelleGrade varchar not null
+CREATE TABLE IF NOT EXISTS Grade(
+    idGrade int auto_increment NOT NULL PRIMARY KEY,
+    libelleGrade varchar (250) not null
 )ENGINE = INNODB;
 
 CREATE TABLE IF NOT EXISTS possede(
