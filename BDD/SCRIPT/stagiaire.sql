@@ -36,9 +36,9 @@ CREATE TABLE Formation(
 # Table: Formateur
 #------------------------------------------------------------
 CREATE TABLE Formateur(
-        idFormateur  Int  Auto_increment  NOT NULL PRIMARY KEY,
-        nomFormateur Varchar (250) NOT NULL
-        prenomFormateur Varchar (250) NOT NULL
+        idFormateur  Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        nomFormateur Varchar (250) NOT NULL,
+        prenomFormateur  Varchar (250) NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -46,7 +46,7 @@ CREATE TABLE Formateur(
 # Table: Stagiaire
 #------------------------------------------------------------
 CREATE TABLE Stagiaire(
-        idStagiaire     Int  Auto_increment  NOT NULL PRIMARY KEY,
+        idStagiaire     Int  Auto_increment  NOT NULL PRIMARY KEY ,
         nomStagiaire    Varchar (250) NOT NULL ,
         prenomStagiaire Varchar (250) NOT NULL ,
         adresse         Varchar (250) NOT NULL ,
@@ -57,28 +57,109 @@ CREATE TABLE Stagiaire(
         idHebergement   Int NOT NULL ,
         idFormation     Int NOT NULL ,
         idFormateur     Int NOT NULL
-
 )ENGINE=InnoDB;
 
-#------------------------------------------------------------
-# Table: Enseignement
-#------------------------------------------------------------
 
+#------------------------------------------------------------
+# Table: Enseigner
+#------------------------------------------------------------
 CREATE TABLE Enseignement(
-        idEnseignement  Int Auto_increment NOT NULL PRIMARY KEY,
+        idEnseignement Int Auto_increment NOT NULL PRIMARY KEY,
         idFormation Int NOT NULL ,
         idFormateur Int NOT NULL
 )ENGINE=InnoDB;
 
+#------------------------------------------------------------
+# Table: Matieres
+#------------------------------------------------------------
+CREATE TABLE Matieres(
+        idMatiere  Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        nomMatiere Varchar (50) NOT NULL
+)ENGINE=InnoDB;
 
-ALTER TABLE Formation ADD CONSTRAINT FK_Formation_Groupe FOREIGN KEY (idGroupe) REFERENCES Groupe(idGroupe),
+#------------------------------------------------------------
+# Table: suit-suivre
+#------------------------------------------------------------
 
-ALTER TABLE Stagiaire ADD CONSTRAINT FK_Stagiaire_Hebergement FOREIGN KEY (idHebergement) REFERENCES Hebergement(idHebergement);
-ALTER TABLE Stagiaire ADD CONSTRAINT FK_Stagiaire_Formation FOREIGN KEY (idFormation) REFERENCES Formation(idFormation);
-ALTER TABLE Stagiaire ADD CONSTRAINT FK_Stagiaire_Formateur FOREIGN KEY (idFormation) REFERENCES Formateur(idFormateur);
+CREATE TABLE Suivre(
+        idSuivre Int Auto_increment NOT NULL PRIMARY KEY,
+        idStagiaire Int NOT NULL ,
+        idMatiere   Int NOT NULL ,
+        note        Float NOT NULL
+)ENGINE=InnoDB;
 
-ALTER TABLE Enseignement ADD CONSTRAINT FK_Enseignement_Formation FOREIGN KEY (idFormation) REFERENCES Formation(idFormation);
-ALTER TABLE Enseignement ADD CONSTRAINT FK_Enseignement_Formateur FOREIGN KEY (idFormateur) REFERENCES Formateur(idFormateur);
+
+#------------------------------------------------------------
+# Table: constituer
+#------------------------------------------------------------
+CREATE TABLE Constituer(
+        idConstituer Int NOT NULL PRIMARY KEY,
+        idFormation Int NOT NULL ,
+        idMatiere   Int NOT NULL
+)ENGINE=InnoDB;
+
+
+
+ALTER TABLE Formation
+        ADD CONSTRAINT FK_Formation_Groupe
+        FOREIGN KEY (idGroupe)
+        REFERENCES Groupe(idGroupe);
+
+ALTER TABLE Suivre
+        ADD CONSTRAINT FK_Suivre_Stagiaire 
+        FOREIGN KEY (idStagiaire)
+        REFERENCES Stagiaire(idStagiaire);
+
+ALTER TABLE Suivre
+        ADD CONSTRAINT FK_Suivre_Matiere
+        FOREIGN KEY (idMatiere)
+        REFERENCES Matieres(idMatiere);
+
+ALTER TABLE Constituer
+        ADD CONSTRAINT FK_Constituer_Formation 
+        FOREIGN KEY (idFormation)
+        REFERENCES Formation(idFormation);
+
+ALTER TABLE Constituer
+        ADD CONSTRAINT FK_Constituer_Matieres
+        FOREIGN KEY (idMatiere)
+        REFERENCES Matieres(idMatiere);
+
+ALTER TABLE stagiaire 
+        ADD CONSTRAINT FK_Stagiaire_Hebergement 
+        FOREIGN KEY (idHebergement) 
+        REFERENCES Hebergement(idHebergement);
+
+ALTER TABLE Stagiaire
+	ADD CONSTRAINT FK_Stagiaire_Formation
+	FOREIGN KEY (idFormation)
+	REFERENCES Formation(idFormation);
+
+ALTER TABLE Stagiaire
+	ADD CONSTRAINT FK_Stagiaire_Formateur
+	FOREIGN KEY (idFormateur)
+	REFERENCES Formateur(idFormateur);
+
+ALTER TABLE Enseignement
+        ADD CONSTRAINT FK_Enseignement_Formation
+        FOREIGN KEY (idFormation)
+        REFERENCES Formation(idFormation);
+
+ALTER TABLE Enseignement
+        ADD CONSTRAINT FK_Enseignement_Formateur 
+        FOREIGN KEY (idFormateur)
+        REFERENCES Formateur(idFormateur);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
