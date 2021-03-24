@@ -1,4 +1,4 @@
-Ecrivez des requêtes SELECT (A chaquefois ,vous stockerez la requete dans un fichier texte» pour
+﻿Ecrivez des requêtes SELECT (A chaquefois ,vous stockerez la requete dans un fichier texte» pour
 a. Affichez la totalité de la table « client ».
 b. Affichez les noms de tous les clients.
 c. Affichez les différentes dates de commandes sans répétition.
@@ -17,3 +17,27 @@ n. Affichez la quantité totale achetée par le client1.
 o. Affichez la quantité moyenne achetée par le client 2.
 p. Affichez les clients classés par ordre alphabétique de leur nom.
 q. Affichez les articles classés selon leur prix décroissant. 
+
+*************************************************************************************************************
+
+Réponses :
+
+a. SELECT nomClient, prenomClient, dateEntreeClient
+   FROM clients;
+
+b. SELECT nomClient FROM clients;
+
+c. SELECT DISTINCT dateCommande FROM commandes; //Sans doublons dans les dates
+
+d. SELECT prenomClient FROM clients WHERE prenomClient = "sophie";
+   SELECT prenomClient FROM clients WHERE prenomClient LIKE "sophie";
+
+e. SELECT idArticle FROM articles WHERE 
+
+f. SELECT UPPER(nomClient) FROM clients;
+
+g. SELECT UPPER(Substr(nomClient,1)) FROM clients; SELECT nomClient FROM clients WHERE UPPER(Substr(nomClient,1));
+
+h. SELECT LENGTH(nomClient) FROM clients; SELECT nomClient FROM clients WHERE LENGTH(nomClient) = 5;
+
+i. SELECT 
