@@ -41,6 +41,11 @@ WHERE obscom != "";
 
 --8.Lister le total de chaque commande par total décroissant
 --Affichage numéro de commande et total
+SELECT numcom, 
+SUM(qtecde*priuni) AS "Total" 
+FROM ligcom
+GROUP BY numcom
+ORDER BY qtecde*priuni DESC
 
 
 --9.Lister les commandes dont le total est supérieur à 10 000€; On exclura dans le calcul du total les 
@@ -58,5 +63,12 @@ SELECT nomfou AS "Nom fournisseur",datcom AS "Date commande",numcom AS "N° de c
 FROM fournis,entcom 
 WHERE entcom.numfou = fournis.numfou;
 
---11.
+--11.Sortir les produits des commandes ayant le mot "urgent" en observation.
+---Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et 
+---le sous total = quantié commandée * prix unitaire
+SELECT entcom.numcom AS "N° de commande"
+FROM entcom
+WHERE obscom LIKE "%urgent%"
+GROUP BY numcom
+
 
