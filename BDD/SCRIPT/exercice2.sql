@@ -23,36 +23,73 @@ SELECT COUNT(*) FROM commandes;
 
 -- --------------------------------------------------------
 -- E. Afficher le montant moyen de commande par client
+SELECT clients.nomClient, clients.prenomClient,
+ROUND(AVG(commandes.cde_total),2) AS "Montant moyen de commande"
+FROM commandes
+INNER JOIN clients ON commandes.idClient = clients.idClient
+GROUP BY commandes.idClient;
 
 -- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- F. Afficher le montant le plus élevé de commande par client
+SELECT clients.nomClient, clients.prenomClient,
+MAX(commandes.cde_total) AS "Montant le plus élevé" 
+FROM commandes
+INNER JOIN clients ON commandes.idClient = clients.idClient
+GROUP BY commandes.idClient
 
 -- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- G. Afficher le nombre de commandes par client
+SELECT clients.nomClient, clients.prenomClient,
+COUNT(idCommande) AS "Nombre de commande"
+FROM commandes
+INNER JOIN clients on commandes.idClient = clients.idClient
+GROUP by commandes.idCommande
 
 -- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- H. Afficher le nombre d 'articles commandés en moyenne par client
+SELECT clients.nomClient, clients.prenomClient,
+ROUND(AVG(quantiteCommande),2) AS "Moyenne d'article commandé"
+FROM commandes
+INNER JOIN articles on commandes.idArticle = articles.idArticle
+INNER JOIN clients ON commandes.idClient = clients.idClient
+GROUP BY commandes.idClient;
 
 -- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- I. Afficher le nombre d'articles commandés en moyenne par article
+SELECT articles.descriptionArticle, 
+ROUND(AVG(commandes.quantiteCommande),2) AS "moyenne des articles" 
+FROM `commandes` 
+INNER JOIN articles ON commandes.idArticle = articles.idArticle 
+GROUP BY commandes.idArticle;
 
 -- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- J. Afficher le nombre total d'articles commandés par article
+SELECT articles.descriptionArticle, 
+SUM(quantiteCommande)
+FROM commandes
+INNER JOIN articles ON commandes.idArticle = articles.idArticle
+GROUP BY commandes.idArti
 
 -- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- K. Afficher le nombre moyen d'articles par client et par date
+SELECT clients.nomClient, commandes.dateCommande,
+ROUND(AVG(commandes.quantiteCommande),2) AS "Le nombre moyen d'article"
+FROM commandes
+INNER JOIN articles ON commandes.idArticle = articles.idArticle
+INNER JOIN clients ON commandes.idClient = clients.idClient
+GROUP BY commandes.idClient,commandes.dateCommande;
 
 -- --------------------------------------------------------
 
