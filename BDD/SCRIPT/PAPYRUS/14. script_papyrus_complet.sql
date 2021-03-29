@@ -11,7 +11,7 @@ CREATE TABLE `fournis` (
   `posfou` char(5) NOT NULL,
   `vilfou` varchar(30) NOT NULL,
   `confou` varchar(15) NOT NULL,
-  `satisf` tinyint(4) DEFAULT NULL, 
+  `satisf` tinyint(4) DEFAULT NULL 
   CHECK (`satisf` >=0 AND `satisf` <=10)
 )ENGINE = InnoDB;
 

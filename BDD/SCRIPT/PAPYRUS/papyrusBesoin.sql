@@ -1,5 +1,5 @@
 --1. Quelles sont les commandes du fournisseur 09120 
-SELECT NUMCOM 
+SELECT numcom 
 FROM entcom
 INNER JOIN fournis on entcom.numfou = fournis.numfou
 WHERE fournis.numfou ="09120";
@@ -35,23 +35,26 @@ WHERE MONTH(DATCOM) = 3 OR MONTH(datcom) = 4;
 
 --7.Quelles sont les commandes du jour qui ont des observations particulières?
 --Affichage numéro de commande, date de commande)
-SELECT numcom,datcom from entcom WHERE obscom is not null and YEAR(datcom)=YEAR(GETDATE());
---Ne fonctionne pas
+SELECT numcom,datcom,obscom 
+FROM entcom 
+WHERE obscom != "";
 
 --8.Lister le total de chaque commande par total décroissant
 --Affichage numéro de commande et total
 
 
---9.
+--9.Lister les commandes dont le total est supérieur à 10 000€; On exclura dans le calcul du total les 
+---articles commandés en quantité supérieur ou égale à 1000. (Affichage numéro de commande et total)
 SELECT numcom, 
-SUM(qtecde*priuni) as 'TOTAL' 
+SUM(qtecde*priuni)>10000 as "Total" 
 from ligcom 
-WHERE qtecde < 1000
-GROUP BY numcom 
-HAVING SUM (qtecde  * priuni)>10000;
+WHERE qtecde < 1000 
+GROUP BY numcom; 
+--HAVING SUM (qtecde  * priuni)>10000;
 
---10.
-SELECT nomfou,datcom,numcom 
+--10.Lister les commandes par nom fournisseur
+---Afficher le nom
+SELECT nomfou AS "Nom fournisseur",datcom AS "Date commande",numcom AS "N° de commande"
 FROM fournis,entcom 
 WHERE entcom.numfou = fournis.numfou;
 
