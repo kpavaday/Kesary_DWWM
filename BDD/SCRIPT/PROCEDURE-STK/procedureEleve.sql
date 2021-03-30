@@ -1,0 +1,6 @@
+DeLIMITTER $$
+CREATE PROCEDURE `Maintenance`()
+BEGIN
+UPDATE eleves SET NomEleve = UCASE(`NomEleve`);
+END$$
+DELIMITTER ;
