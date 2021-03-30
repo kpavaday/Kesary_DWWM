@@ -1,0 +1,22 @@
+
+html,body, header, footer, div, nav, section, main{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.espaceHaut{
+    height: 2vh;
+    background-color:aquamarine;
+}
+.affichage{
+    background-color: white;
+    height: 150vh;
+    flex: none;
+    
+}
