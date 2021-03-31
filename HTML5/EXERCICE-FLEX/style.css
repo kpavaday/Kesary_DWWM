@@ -1,0 +1,32 @@
+body{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 20vh;
+    background-color: coral;
+}
+.espace{
+    height: 2vh;
+    flex: none;
+}
+.container{
+    flex-direction: row;
+    display: flex;
+}
+.gris{
+    background-color: gray;
+    flex: 1;
+
+
+}
+.espaceEntre{
+    background-color: white;
+    width: 1vh;
+}
+.jaune{
+    
+    flex: 3;
+    background-color: yellow;
+}
