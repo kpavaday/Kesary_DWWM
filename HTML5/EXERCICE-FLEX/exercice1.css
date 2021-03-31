@@ -8,25 +8,30 @@ header{
     background-color: coral;
 }
 .espace{
-    height: 2vh;
+    height: 5vh;
     flex: none;
 }
 .container{
     flex-direction: row;
     display: flex;
 }
+.espaceCote{
+    width: 20vh;
+} 
 .gris{
     background-color: gray;
     flex: 1;
-
-
+    text-align: left;
 }
 .espaceEntre{
-    background-color: white;
     width: 1vh;
 }
 .jaune{
-    
     flex: 3;
     background-color: yellow;
+    text-align: left;
+}
+footer{
+    height: 45vh;
+    background-color: yellowgreen;
 }

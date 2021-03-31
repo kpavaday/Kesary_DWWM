@@ -1,0 +1,55 @@
+body{
+    background-color: powderblue;
+    display: flex;
+    flex-direction: column;
+}
+.espace{
+    height: 3vh;
+    flex: none;
+   
+}
+
+header{
+    height: 30vh;
+    background-color: orange;
+}
+.espaceUn{
+    height: 8vh;
+}
+.container{
+    flex-direction: row;
+    display: flex;
+}
+.gris{
+    background-color: grey;
+    height: 70vh;
+    flex: 0.5;
+}
+.espaceEntre{
+    width: 5vh;
+}
+.container2{
+    flex-direction: column;
+    flex: 2;
+    
+}
+.jaune{
+    background-color: yellow;
+    height: 20vh;
+  
+}
+.espaceJB{
+    height: 5vh;
+}
+.bleu{
+    background-color: blue;
+    height: 20vh;
+}
+.vertClair{
+    background-color: greenyellow;
+    height: 20vh;
+}
+footer{
+    height: 30vh;
+    background-color: green;
+}

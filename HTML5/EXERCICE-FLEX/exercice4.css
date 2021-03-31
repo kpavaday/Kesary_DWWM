@@ -1,0 +1,61 @@
+body{
+    background-color: #16697a;
+    flex-direction: column;
+    display: flex;
+}
+.top{
+    height: 5vh;
+    background-color: white;
+}
+header{
+    flex-direction: row;
+    display: flex;
+}
+.headder1{
+    background-color: white;
+    flex: 0.2;
+    height: 20vh;
+}
+.headder2{
+    background-color: #ee91bc ;
+    flex: 3;
+    height: 20vh;
+}
+.headder3{
+    background-color: white;
+    flex: 0.2;
+    height: 20vh;
+}
+.espaceTop{
+    height: 5vh;
+    background-color: white;
+}
+.container{
+    flex-direction: row;
+    display: flex;
+}
+.espaceGauche1{
+    background-color: white;
+    flex: 0.3;
+    height: 30vh;
+}
+.gauche{
+    height: 30vh;
+    background-color: greenyellow;
+    flex: 1;
+}
+
+.espace1{
+    width: 5vh;
+    background-color: white;
+}
+.droite{
+    height: 30vh;
+    background-color: indigo;
+    flex: 2;
+}
+.espaceDroite{
+    background-color: white;
+    flex: 0.3;
+    height: 30vh;
+}
