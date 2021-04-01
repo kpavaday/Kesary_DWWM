@@ -1,5 +1,5 @@
 
-div{
+div,header,footer{
     display:flex;
     flex:1;
 }
@@ -10,7 +10,6 @@ div{
     border:4px solid blue;
     height:800px;
     padding: 15px;
-
 }
 header{
     border: 1px solid coral;
@@ -36,7 +35,7 @@ header{
     border: 4px solid yellow;
     margin-top: 5px;  
 }
-.footer{
+footer{
     border: 4px solid green;
     margin-top: 15px;
 }

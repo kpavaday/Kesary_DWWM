@@ -1,0 +1,90 @@
+body{
+   background-color: violet;
+   display: flex;
+   flex-direction: column;
+}
+.container{
+
+    height: 7vh;
+    margin-top: 20px;
+}
+.menu{
+    flex-direction: row;
+    display: flex;
+}
+.du_menu:nth-child(1){
+    height: 5vh;
+    flex: 1;
+    background-color: black;
+}
+.du_menu:nth-child(2){
+    flex: 1;
+    background-color: black;
+}
+.du_menu:nth-child(3){
+    flex: 1;
+    background-color: black;
+}
+.du_menu:nth-child(4){
+    flex: 1;
+    background-color: black;
+}
+.du_menu:nth-child(5){
+    flex: 1;
+    background-color: black;
+}
+.accueil{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    left: 8%;
+    top: 3.6%;
+    text-decoration: none;
+}
+.accueil:hover{
+    color: chartreuse;
+}
+.exo1{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    left: 28%;
+    top:3.6% ;  
+}
+.exo1:hover{
+    color: chartreuse;
+}
+.exo2{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    left: 48%;
+    top: 3.6%;
+}
+.exo2:hover{
+    color: chartreuse;
+}
+.aPropos{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    left: 67%;
+    top: 3.6%;
+}
+.aPropos:hover{
+    color: chartreuse;
+}
+.contact{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    left: 87%;
+    top: 3.6%;
+}
+.contact:hover{
+    color: chartreuse;
+}
