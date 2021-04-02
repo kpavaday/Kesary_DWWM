@@ -106,3 +106,95 @@ body{
     display: flex;
     align-items: center;
 }
+/*---------------------------------------TITRE HOTEL----------------------------------------*/
+.ficheHotel{
+    background-color: #fff;
+    flex: 1;
+}
+.overview{
+    display: flex;
+    background: #d1e5f3;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f4f2f2;
+}
+.overviewHeading{
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 3rem;
+}
+.note{
+    display: flex;
+}
+.iconesEtoile{
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: #31708e;
+}
+/*---------------------------------------PARTIE DESCRIPTION----------------------------------------*/
+.detail{
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: #faf9f9;
+    border-bottom: 1px solid #f4f2f2;
+}
+.description{
+    background-color: white;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+.paragraphe:not(:last-of-type){
+    margin-bottom: 2rem;
+}
+.list{
+    margin: 3rem 0 0 2rem;
+    padding: 3rem 0;
+    border-top: 1px solid #f4f2f2;
+    border-bottom: 1px solid #f4f2f2;
+    display: flex;
+    flex-wrap: wrap;
+}
+.listEl{
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+}
+.btnReserver{
+    display: flex;
+    justify-content: center;
+}
+.reserver{
+    text-align: center;
+    flex: 0 0 55%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 1.5rem 0;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    background: #31708e;
+    transition: all 0.2s linear;
+}
+.reserver:hover{
+    background: white;
+    color: black;
+    border: 1px solid #31708e;
+}
+/*---------------------------------------PHOTOS----------------------------------------*/
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+}
+.photo{
+    width: 100%;
+    display: block;
+}
+.galleryPhotos:not(:nth-child(1)){
+    margin-top: 1rem;
+}
