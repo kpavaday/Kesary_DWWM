@@ -47,3 +47,72 @@
         height: 1.5rem;
     }
 }
+/*-------------------------HOTEL-------------------------------*/
+
+@media screen and (max-width:600px){
+    .overviewHeading{
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem;
+    }
+}
+
+/*-------------------------DESCRIPTION-------------------------------*/
+
+@media screen and (max-width:900px){
+    .detail{
+        padding: 3rem;
+    }
+    .description{
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+}
+@media screen and (max-width:680px){
+    .listEl{
+        flex: 0 0 40%;
+    }
+    .listEl:nth-child(1){
+        margin-right: 5rem;
+
+    }
+    .listEl:nth-child(3){
+        margin-right: 5rem;
+
+    }
+    .listEl:nth-child(5){
+        margin-right: 5rem;
+    }
+}
+@media screen and (max-width:600px){
+    .detail{
+        flex-direction: column;
+    }
+    .description{
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+}
+/*-------------------------BOUTON-------------------------------*/
+
+@media screen and (max-width:1760px){
+    .reserver{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width:680px){
+    .reserver{
+        font-size: 1.6rem;
+        flex: 0 0 65%;
+    }
+}
+
+/*-------------------------PHOTOS-------------------------------*/
+@media screen and (max-width:680px){
+    .gallery{
+        flex-direction: row;
+    }
+    .galleryPhotos:not(:nth-child(1)){
+        margin-top: 0rem;
+    }
+}
