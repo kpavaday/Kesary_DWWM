@@ -1,0 +1,50 @@
+body{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 30vh;
+    background-color: tomato;
+    margin: 80px;
+}
+.container{
+    display: flex;
+    margin: 0 80px 80px 80px;
+}
+.gauche{
+    display: flex;
+    flex: 1;
+    background-color: grey;
+    height: 60vh;
+}
+.droite{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    height: 60vh;
+    margin-left: 50px;
+}
+.colonneDroite:nth-child(1){
+    height: 10vh;
+    background-color: yellow;
+    flex: 0.5;
+}
+.colonneDroite:nth-child(2){
+    height: 10vh;
+    background-color: blue;
+    flex:0.5;
+    margin-top: 50px;
+}
+.colonneDroite:nth-child(3){
+    height: 10vh;
+    background-color:red;
+    flex:0.5;
+    margin-top: 50px;
+}
+footer{
+    margin: 30px 80px 80px;
+    height: 30vh;
+    background-color: green;
+
+}

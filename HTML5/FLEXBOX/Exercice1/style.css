@@ -1,0 +1,39 @@
+body{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+.general{
+    height: 700px;
+    margin: 150px;
+    
+}
+header{
+    background-color: orangered;  
+    height: 30vh; 
+}
+.container{
+    padding-top: 30px;
+    display: flex;
+}
+.gris{
+    display: flex;
+    flex: 1;
+    height: 80vh;
+    background-color: grey;
+    margin-right: 15px;
+}
+.jaune{
+    display: flex;
+    flex: 3;
+    background-color: yellow;
+    height: 80vh;
+    margin-left: 15px;
+}
+footer{
+    margin-top: 30px;
+    height: 30vh;
+    background-color: green;
+
+}
+
