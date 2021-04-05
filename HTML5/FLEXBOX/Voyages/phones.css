@@ -1,0 +1,138 @@
+/*---------------------------------------HEADER----------------------------------------*/
+@media screen and (max-width:800px) {
+    figure{
+        top: 12%;
+    }
+    .slogan{
+        top: 22%;
+        left: 48%;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+/*---------------------------------------MONTAGNE----------------------------------------*/
+@media screen and (max-width:800px){
+    .container1{
+        height: 80vh;
+        margin: 15vh;
+    }
+    .montagne h2{
+        font-size: 1.5em;
+        margin: 20px 20px 45px 20px;
+    }
+    .montagne:nth-child(2){
+        flex: 0.4;
+    }
+    .montagne p{
+        font-size: 1em;
+        padding: 0 50px;
+    }
+}
+/*---------------------------------------PLAGE----------------------------------------*/
+@media screen and (max-width:800px){
+    .container2{
+        height: 80vh;
+        margin: 15vh;
+    }
+    .plage:nth-child(1){
+        flex: 0.4;;
+    }
+    .plage h2{
+        font-size: 1.5em;
+        margin: 20px 20px 55px 20px;
+    }
+    .plage p{
+        font-size: 1em;
+        padding: 0 50px;
+    }
+}
+/*---------------------------------------DESTINATIONS----------------------------------------*/
+@media screen and (max-width:800px){
+    .destination{
+        height: 50px;
+        margin: 0 0;
+        margin-bottom: 50px;
+    }
+    .destination h2{
+        font-size: 1.5em;
+        letter-spacing: 5px;
+        font-weight: bold;
+        margin-bottom: 50vh;
+    }
+}
+/*---------------------------------------PAYS----------------------------------------*/
+@media screen and (max-width:800px){
+    .container3{
+        height: 20vh;
+    }
+    .pays:nth-child(1){
+        margin: 10px;
+    }
+    .pays:nth-child(2){
+        margin: 10px;
+    }
+    .pays:nth-child(3){
+        margin: 10px;
+    }
+    .pays:nth-child(4){
+        margin: 10px;
+    }
+    .pays:nth-child(1) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .pays:nth-child(2) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .pays:nth-child(3) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .pays:nth-child(4) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .container4{
+        height: 20vh;
+        margin-top: 11vh;
+    }
+    .paysSud:nth-child(1){
+        margin: 10px;
+    }
+    .paysSud:nth-child(2){
+        margin: 10px;
+    }
+    .paysSud:nth-child(3){
+        margin: 10px;
+    }
+    .paysSud:nth-child(4){
+        margin: 10px;
+    }
+    .paysSud:nth-child(1) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .paysSud:nth-child(2) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .paysSud:nth-child(3) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+    .paysSud:nth-child(4) h3{
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+}
+/*---------------------------------------FOOTER----------------------------------------*/
+@media screen and (max-width:800px){
+    footer{
+        height: 20vh;
+    }
+    footer h2{
+        padding: 30px;
+        font-size: 2.5em;
+    }
+}
