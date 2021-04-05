@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    border: 10px solid blue;
+    height: 120vh;
+    margin: 50px;
+}
+header{
+    height: 30vh;
+    border: 8px solid orangered;
+    margin: 50px;
+}
+.content{
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+}
+.gauche{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 40px;
+}
+.petitGauche:nth-child(1){
+    border: 8px solid grey;
+    flex: 0.2;
+    margin: 10px;
+}
+.petitGauche:nth-child(2){
+    border: 8px solid grey;
+    display: flex;
+    flex: 0.2;
+    margin: 10px;
+}
+.petitGauche:nth-child(3){
+    border: 8px solid grey;
+    flex: 0.2;
+    display: flex;
+    margin: 10px;
+}
+.petitGauche:nth-child(4){
+    border: 8px solid grey;
+    flex: 0.2;
+    display: flex;
+    margin: 10px;
+}
+.petitGauche:nth-child(5){
+    border: 8px solid grey;
+    flex: 0.2;
+    display: flex;
+    margin: 10px;
+}
+.droite{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin: 40px;
+}
+.petitDroite:nth-child(1){
+    border: 8px solid yellowgreen;
+    flex: 0.4;
+    display: flex;
+    margin: 10px;
+}
+.petitDroite:nth-child(2){
+    border: 8px solid yellowgreen;
+    flex: 0.4;
+    display: flex;
+    margin: 10px;
+}
+.petitDroite:nth-child(3){
+    border: 8px solid yellowgreen;
+    flex: 0.4;
+    display: flex;
+    margin: 10px;
+}
+footer{
+    height: 30vh;
+    border: 8px solid green;
+    margin: 50px;
+}
