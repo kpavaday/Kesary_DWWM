@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    background-image:url(./img/fond.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+/**********************************HEADER**********************************************/
+header{
+    background-image: url(./img/header.jpg);
+    background-size: cover;
+    height: 18vh;
+    margin: 50px 80px 0 80px; 
+}
+figure img{
+    height: 20vh;
+    position: relative;
+    left: 4vh;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 43%;
+    top: 13%;
+}
+/**********************************NAVIGATION**********************************************/
+nav{
+    background-image: url(./img/fond1.png);
+    background-size: cover;
+    margin: 0 80px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+.sideBar{
+    /* margin: 20px; */
+    height: 5.5vh;
+    position: relative; 
+    left: 36%;
+    margin-top: 25px;
+    margin-right: 4px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: #23689b;
+    border-radius: 5px;
+}
+/**********************************LE COOKIE DE LA SEMAINE**********************************************/
+.content1{
+    display: flex;
+    flex-direction: row;
+    background-color:#f3f4ed ;
+    margin: 0 80px;
+    overflow-y: scroll;
+    height: 50vh;
+    
+}
+.gauche{
+    flex: 1;
+    margin: 20px 20px 20px ;
+}
+.droite{
+    flex: 3;
+    margin-right: 30px;
+    margin: 20px;
+}
+.cookieSemaine{
+    position: absolute;
+    left: 77%;
+    top: 40%;
+}
+.semaine{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    background-color: #3282b8;
+}
+.ingredients{
+    font-size: 2em;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+}
+.recette{
+    padding-left: 55px;
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}
+.paraRecette{
+    font-size: 1.3em;
+    padding-left: 55px;
+    padding-bottom: 20px;
+}
+span{
+    font-style: italic;
+    padding-left: 95px;
+}
+.paraRecette2{
+    padding-top: 20px;
+    padding-left: 55px;
+    font-size: 1.3em;
+}
+/**********************************HISTOIRE DU COOKIE*******************/
+.content2{
+    background-color:#f3f4ed ;
+    display: flex;
+    flex-direction: column;
+    margin: 0 80px; 
+}
+.histoireCookie{
+    margin-top: 12vh;
+    margin-left: 25vh;
+    margin-right: 25vh;
+
+}
+.histoireDeCookie{
+    display: flex;
+    flex-direction: row;
+}
+.histoire{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.histoireCookies{
+    text-align: justify;
+    font-size: 1.3em;
+    margin-bottom: 10vh;
+}
+.paraCookie{
+    flex: 3;
+}
+.divergent{
+    flex: 0.5;
+}
+/*-------------------PREMIERE VERSION------------------------*/
+.premiere{
+    margin-left: 25vh;
+    margin-right: 25vh;
+}
+.versionUne{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.premiereVersion{
+    text-align: justify;
+    font-size: 1.3em;
+    margin-bottom: 10vh;
+}
+
+/*-------------------DEUXIEME VERSION------------------------*/
+
+.deuxieme{
+    margin-left: 25VH;
+    margin-right: 25VH;
+}
+.versionDeux{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.deuxiemeVersion{
+    text-align: justify;
+    font-size: 1.3em;
+    margin-bottom: 10vh;
+}
+
+
+
+
+

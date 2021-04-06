@@ -1,5 +1,6 @@
 /*---------------------------------------HEADER----------------------------------------*/
 @media screen and (max-width:800px) {
+   
     figure{
         top: 12%;
     }
@@ -10,10 +11,11 @@
     h1{
         font-size: 2.5em;
     }
+}
 /*---------------------------------------MONTAGNE----------------------------------------*/
 @media screen and (max-width:800px){
     .container1{
-        height: 80vh;
+       
         margin: 15vh;
     }
     .montagne h2{
@@ -31,7 +33,7 @@
 /*---------------------------------------PLAGE----------------------------------------*/
 @media screen and (max-width:800px){
     .container2{
-        height: 80vh;
+        
         margin: 15vh;
     }
     .plage:nth-child(1){
@@ -58,24 +60,36 @@
         letter-spacing: 5px;
         font-weight: bold;
         margin-bottom: 50vh;
+        left: 22vh;
     }
 }
 /*---------------------------------------PAYS----------------------------------------*/
 @media screen and (max-width:800px){
     .container3{
         height: 20vh;
+        margin: 17vh;
     }
     .pays:nth-child(1){
-        margin: 10px;
+        flex: 2;
+        margin-right: 20px;
     }
     .pays:nth-child(2){
-        margin: 10px;
+        flex: 2;
+        /* margin: 10px; */
+        /* margin: 0;*/
+        margin-right: 20px; 
     }
     .pays:nth-child(3){
-        margin: 10px;
+        flex: 2;
+        /* margin: 10px; */
+        /* margin: 0;*/
+        margin-right: 20px; 
     }
     .pays:nth-child(4){
-        margin: 10px;
+        flex: 2;
+        /* margin: 10px; */
+        /* margin: 0;
+        margin-right: 20px; */
     }
     .pays:nth-child(1) h3{
         font-size: 1.3em;
@@ -95,19 +109,22 @@
     }
     .container4{
         height: 20vh;
-        margin-top: 11vh;
+        margin: 17vh;
     }
     .paysSud:nth-child(1){
-        margin: 10px;
+        flex: 2;
+        margin-right: 20px;
     }
     .paysSud:nth-child(2){
-        margin: 10px;
+        flex: 2;
+        margin-right: 20px;
     }
     .paysSud:nth-child(3){
-        margin: 10px;
+        flex: 2;
+        margin-right: 20px;
     }
     .paysSud:nth-child(4){
-        margin: 10px;
+        flex: 2;
     }
     .paysSud:nth-child(1) h3{
         font-size: 1.3em;

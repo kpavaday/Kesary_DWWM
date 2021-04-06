@@ -38,7 +38,7 @@ h1{
 .container1{
     display: flex;
     flex-direction: row;
-    height: 60vh;
+   /* height: 60vh;*/
     margin:25vh;
 }
 .montagne:nth-child(1){
@@ -65,7 +65,7 @@ h1{
 }
 /*---------------------------------------PLAGE----------------------------------------*/
 .container2{
-    height: 60vh;
+ 
     margin:25vh;
     display: flex;
     flex-direction: row;
@@ -95,56 +95,65 @@ h1{
 /*---------------------------------------DESTINATIONS----------------------------------------*/
 
 .destination{
-    height: 100px;
-    margin: 0 25vh;
+    /* height: 100px; */
+    margin: 0 20vh 10vh 0;
 }
 .destination h2{
     line-height: 80px;
-    font-size: 4em;
-    letter-spacing: 20px;
-    text-align: center;
+    font-size: 3em;
+    letter-spacing: 15px;
+    position: relative;
+    left: 33vh;
+    
 }
 
 /*---------------------------------------PAYS----------------------------------------*/
 .container3{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     height: 30vh;
-    margin: 0 15vh;
+    margin: 20vh 25vh;
+
+    /* margin: 0 25vh; */
+
 }
 .pays:nth-child(1){
     flex: 1;
     background-image: url(./img/08.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+     margin-right: 20px; 
+    /* margin: 20px; */
 }
 .pays:nth-child(2){
     flex: 1;
     background-image: url(./img/07.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+    margin-right: 20px; 
+    
+     
 }
 .pays:nth-child(3){
     flex: 1;
     background-image: url(./img/06.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+     margin-right: 20px; 
+    /* margin: 20px; */
 }
 .pays:nth-child(4){
     flex: 1;
     background-image: url(./img/05.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+    /* margin: 20px; */
 }
 .pays:nth-child(1) h3{
     color: #f5deb3;
     position: relative;
     text-align: center;
-    top: 35%;
+    top: 30%;
     font-size: 2.5em;
     line-height: 50px;
 }
@@ -153,7 +162,7 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: black;
-    top: 35%;
+    top: 30%;
     line-height: 50px;
 }
 .pays:nth-child(3) h3{
@@ -161,7 +170,7 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: black;
-    top: 35%;
+    top: 30%;
     line-height: 50px;
 }
 .pays:nth-child(4) h3{
@@ -169,49 +178,52 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: black;
-    top: 35%;
+    top: 30%;
     line-height: 50px;
 }
 .container4{
     display: flex;
     flex-direction: row;
     height: 30vh;
-    margin: 20vh 15vh;
-}
+    margin: 20vh 25vh;
+} 
 .paysSud:nth-child(1){
     flex: 1;
     background-image: url(./img/04.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
-}
+    margin-right: 20px;
+    /* margin: 20px;*/
+} 
 .paysSud:nth-child(2){
     flex: 1;
     background-image: url(./img/03.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+    margin-right: 20px;
+    /* margin: 20px; */
 }
 .paysSud:nth-child(3){
     flex: 1;
     background-image: url(./img/02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+    margin-right: 20px;
+    /* margin: 20px; */
 }
 .paysSud:nth-child(4){
     flex: 1;
     background-image: url(./img/01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
-}
+    /* margin: 20px;*/
+} 
 .paysSud:nth-child(1) h3{
     position:relative;
     text-align: center;
     font-size: 2.5em;
     color: black;
-    top: 35%;
+    top: 30%;
     line-height: 50px;
 }
 .paysSud:nth-child(2) h3{
@@ -219,7 +231,7 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: black;
-    top: 35%;
+    top: 30%;
     line-height: 50px;
 }
 .paysSud:nth-child(3) h3{
@@ -227,21 +239,21 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: black;
-    top: 35%;
+    top: 30%;
     line-height: 50px;
 }
 .paysSud:nth-child(4) h3{
     color: #f5deb3;
     position: relative;
     text-align: center;
-    top: 35%;
+    top: 30%;
     font-size: 2.5em;
     line-height: 50px;
 }
 /*---------------------------------------FOOTER----------------------------------------*/
 
 footer{
-    height: 15vh; 
+    height: 20vh; 
     background-image: url(./img/pp.jpg);
     background-size: cover; 
     background-repeat: no-repeat;
