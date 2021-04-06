@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    background-image:url(./img/fond.jpg);
+    background-position:center;
+    height: 80vw;
+    display: flex;
+    justify-content: center; 
+}
+.container{
+    width: 80vw;
+    flex-direction: column;
+    flex: none;
+    display: block;
+}
+div{
+    display: flex;
+    flex: 1;
+}
+img{
+    width: 100%;
+}
+video{
+    width: 100%;
+}
+.colonne{
+    flex-direction: column;
+}
+.espace{
+    flex: 0.2;
+}
+.espaceEntre{
+    height: 5vh;
+}
+/************************* HEADER **************************/
+header{
+    background-image: url(./img/header.jpg);
+    background-size: cover;
+    display: flex;
+}
+.titrePage{
+    flex: 9;
+    justify-content: center;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 4em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0.1em 0.1em 0.2em white;
+}
+
+
