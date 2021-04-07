@@ -1,10 +1,12 @@
 <?php
 
 class Personne{
-    protected $_nom;
-    protected $_prenom;
-    protected $_age;
-    protected $_job;
+
+    private $_idPersonne;
+    private $_nom;
+    private $_prenom;
+    private $_age;
+    private $_job;
 
     public function __construct(array $options = [])
     {
@@ -26,47 +28,20 @@ class Personne{
     }
     
     //Getters et Setters
-    public function getNom(){
-        return $this->_nom;
-    }
-    public function getPrenom(){
-        return $this->_prenom;
-    }
-    public function getAge(){
-        return $this->_age;
-    }
-    public function getJob(){
-        return $this->_job;
-    }
+    public function getIdPersonne(){return $this->_idPersonne;}
+    public function getNom(){return $this->_nom;}
+    public function getPrenom(){return $this->_prenom;}
+    public function getAge(){return $this->_age;}
+    public function getJob(){return $this->_job;}
 
-    public function setNom($nom){
-        $this->_nom = $nom;
-    }
-    public function setPrenom($prenom){
-        $this->_prenom = $prenom;
-    }
-    public function setAge($age){
-        $this->_age = $age;
-    }
-    public function setJob($job){
-        $this->_job = $job;
-    }
+    public function setIdPersonne($idPersonne){$this->_idPersonne = $idPersonne;}
+    public function setNom($nom){$this->_nom = $nom;}
+    public function setPrenom($prenom){$this->_prenom = $prenom;}
+    public function setAge($age){$this->_age = $age;}
+    public function setJob($job){$this->_job = $job;}
 }
+
 /*****************Autres Méthodes***************** */
- /**
-     * Transforme l'objet en chaine de caractères
-     *
-     * @return String
-     */
-/*
-   public function toString(){
-        $affichage = "Nom : ". $this->getNom(). "<br>";
-        $affichage .= "Prénom : ". $this->getPrenom(). "<br>";
-        $affichage .= "Age : ". $this->getAge(). " ans <br>";
-        $affichage .= "Fonction :". $this->getJob(). "<br>";
-        return $affichage;
-        }
-    }
-*/
+
 ?>
 
