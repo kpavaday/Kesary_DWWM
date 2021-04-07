@@ -1,0 +1,57 @@
+body{
+    background-color:cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    display: flex;
+}
+nav{
+    flex: 1;
+    margin: 20px;
+    background-color: black;
+    padding: 20px;
+}
+nav a{
+    color: white;
+    font-size: 2em;
+    text-align:center ;
+}
+
+h2{
+    font-size: 4em;
+    text-align: center;
+    color: white;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}   
+
+.photo1{
+    margin-top: 100px;
+    margin-left: 30vh;
+    background-image: url(./img/photo1.jpg);
+    background-size: cover;
+    background-repeat: no repeat;
+    flex: 0.5;
+   
+}
+.photo2{
+    margin-top: 100px;
+    margin-left: 100px;
+    background-image: url(./img/photo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vw;
+    width: 30vw;
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px;
+}
