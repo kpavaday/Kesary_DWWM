@@ -18,20 +18,6 @@ include "main.php";
 
 
 
-/*function affichage($tab)
-{
-    for ($i=0; $i < count($tab); $i++) { 
-       echo '<div class="classePersonne">';
-            echo $tab[$i]->toString();  
-        echo '</div>';     
-    }
-}
-affichage($listePersonne);*/
 
-for ($i=0; $i < count($listePersonne); $i++) { 
-    echo '<div class="classePersonne">';
-         echo $listePersonne[$i]->toString();  
-     echo '</div>';   
-}  
 include "footer.php";
 ?>
