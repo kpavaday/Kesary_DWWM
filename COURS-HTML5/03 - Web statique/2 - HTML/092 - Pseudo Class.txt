@@ -1,1 +1,0 @@
-https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes
