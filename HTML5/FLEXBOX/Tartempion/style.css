@@ -8,18 +8,111 @@
     box-sizing: inherit;
 }
 body{
-    background-image:url(./img/bg.jpg);
-    background-size: cover;
     display: flex;
     flex-direction: column;
-
 }
 
 /*************************************HEADER***************************************/
 header{
-    margin-top: 30px;
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
 }
-nav{
-    
+.top{
+    display: flex;
+    flex: 3;   
+}
+.espaceLogo2{
+    flex: 1;
+    margin-top: 10px;
+}
+img{
+    position: relative;
+    left: 2vh; 
+}
+/*************************************NAVIGATION***************************************/
+.espaceNav{
+    height: 0.5vw;
+
+}
+.menuHeader{
+    background-color: black;
+    display: flex;
+    height: 7vh;
+}
+.menuItem{
+    flex-direction: row;
+    display: flex;   
+}
+.menuItem, ul,li{
+    padding-right: 3vh;
+    list-style: none;
+    position: relative;
+    top: 28%;
+}
+a{
+    font-size: 1.3em;
+    color: white;
+    position: relative;
+    left: 4vw;  
+}
+/*************************************DIV ENTETE***************************************/
+.espaceEntete{
+    height: 2vh;
+   
+}
+.enTete{
+    background-image: url(./img/photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+/*************************************SECTION CONTAINER***************************************/
+.container{
+    display: flex;
+}
+.gauche{
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+.droite{
+    flex: 2;
+    background-color: grey;
+}
+.espaceAccueil{
+    display: flex;
+    flex: 3;
+    height: 5vh;
+}
+.accueil{
+    display: flex;
+    flex: 1;
+    font-size: 3em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+h2{
+    font-size: 2em;
+    margin:4vh 2vh 2vh 2vh;
+}
+p{
+    font-size: 1.5em;
+    margin: 0 2vh 2vh 2vh;
+    letter-spacing: 1px;
+}
+/*************************************FOOTER***************************************/
+.menuFooter{
+    background-color: black;
+    height: 7vh;   
+}
+.menuItem,ul,li{
+    flex-direction: row;
+    display: flex;
+    padding-right: 3vh;
+    list-style: none;
+    position: relative;
+    top: 20%;
 }
