@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: "Poppins",sans-serif;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+    align-items: center;
+    margin: auto;
+    padding: 0 2em;
+    background-color: purple;
+    color: white ;
+    position: relative;
+    box-shadow: 0 0 4px #333;
+}
+.nav-liens{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-liens li{
+    padding: 1rem;
+}
+.nav-liens,h2{
+    flex: 1;
+}
+p{
+    margin: 3rem 2rem;
+}
+.label{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 3rem;
+    visibility: hidden;
+}
+.label:hover{
+    cursor: pointer;
+}
+.fas{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#hamburger{
+    display: none;
+}
+#hamburger:checked + label .fa-bars{
+    visibility: hidden;
+}
+#hamburger:checked + label .fa-times{
+    visibility: visible;
+}
+#hamburger:checked ~ .nav-liens{
+    display: block;
+
+}

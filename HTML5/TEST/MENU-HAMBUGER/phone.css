@@ -1,0 +1,17 @@
+@media  screen and (max-width:600px) {
+    .nav-liens{
+        display: none;
+    }
+    .fa-bars{
+        visibility: visible;
+    }  
+}
+@media  screen and (min-width:600px){
+    .fa-times{
+        visibility: hidden;
+    }
+    .nav-liens{
+        display: flex;
+    }
+
+}

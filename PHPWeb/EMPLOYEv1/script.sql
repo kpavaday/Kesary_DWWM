@@ -37,3 +37,11 @@ CREATE TABLE Enfant(
     ageEnfant Float (10) NOT NULL
 )
 
+ALTER TABLE Enfant
+ADD
+CONSTRAINT fk_enfant_employe FOREIGN KEY (idEmploye) REFERENCES Employe(idEmploye);
+
+ALTER TABLE Employe
+ADD
+CONSTRAINT fk_employe_agence FOREIGN KEY (idAgence) REFERENCES Agence(idAgence);
+

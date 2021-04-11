@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: cadetblue;
+}
+a{
+    text-decoration: none;
+}
+.image img{
+    height: 3vw; /*--Modification de la taille du logo--*/
+}
+
+/*---Modification de la barre de navigation --*/
+.navBar{
+    background-color: black;
+    color: white;
+    display: flex; /*--Le logo va se mettre à côté des <ul>--*/
+    justify-content: space-between; /*--On va placer le logo à gauche et le menu à droite--*/
+    padding: 16px;
+}
+
+/*---Modification de la liste des liens----*/
+.navBar ul{
+    display: flex; /*--on aligne la liste des liens--*/
+    align-items: center; /*--alignement sur l'axe des y (en hauteur)--*/
+    list-style-type: none;
+}
+
+/*---Modification des liens à l'interieur---*/
+.navBar ul li a{
+    color: white;
+    padding: 12px; /*--Padding entre les différents liens--*/
+
+}
+
+/*---Effet Hover---*/
+.navBar ul li a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}

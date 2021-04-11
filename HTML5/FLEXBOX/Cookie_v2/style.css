@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    background-image: url(./img/fond.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+}
+div{
+    display: flex;
+    flex: 1;
+}
+.container{
+    width: 80vw;
+    flex-direction: column;
+    flex: none;
+    display: block;
+}
+/************************* HEADER **************************/
+
+header{
+    background-image: url(img/header.jpg);
+    background-size: cover;
+    display: flex;
+}
+img{
+    width: 100%;
+}
+.titre{
+    display: flex;
+    flex: 9;
+    justify-content: center;
+}
+h1{
+    font-size: 4em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: white 0.1em 0.1em 0.2em;
+    flex: 9;
+    justify-content: center;
+    position: relative;
+    left: 32vh;
+    top: 2vh;   
+}
+/************************** MENU ***************************/
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url(img/fond1.png);
+    background-position:left;
+    padding: 0.2vw 0;
+}
+.menu{
+    flex: none;
+    background: linear-gradient(to bottom, #08598c,#3e99d1);
+    border: 3px solid #326280;
+    border-radius: 5px;
+    font-size: 2em;
+    color: white;
+    padding: 0 0.5vw;
+    position: relative;
+}
+.sousMenu{
+    display:none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 0.1em;
+    margin-left: -0.5vw;
+    background: linear-gradient(to bottom, #08598c,#3e99d1);
+    border: 3px solid #326280;
+    border-radius: 5px;
+    color: white;
+    padding: 0 0.5vw;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+.menu:hover .sousMenu{
+    display: flex;
+}
+.sousItem:hover{
+    color: #ccc; /*Quand on passe la souris sur le sous menu, changement de couleur*/
+    border: 1px solid #ccc; /*Au survol, un bord apparait*/
+}
+/************************** CONTENT ***************************/
+.espaceDessousNav{
+    height: 5VH;
+    background-color: white;
+}
+.content{
+    flex-direction: row;
+    display: flex;
+}
+div.espaceVideo{
+    flex: 0.2;
+}
+
+.titreSemaine{
+    justify-content: center;
+    background: linear-gradient(rgb(30, 87, 153) 0%, rgb(41, 137, 216) 50%, rgb(32, 124, 202) 51%, rgb(125, 185, 232) 100%);
+    padding: 1.5vh;
+}
+.cookieSemaine{
+    flex: 3;
+    flex-direction: column;
+    height: 40vh;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%);
+}
+.ingredients{
+    padding: 5vh;
+}
+
+.ingredients, .recette{
+    flex-direction: column;   
+}
+/************************** HISTOIRE DES COOKIES ***************************/
+.histoireCookie{
+    display: flex;
+    flex-direction: column;
+}
+.titreArticle{
+    justify-content: center;
+    font-size: 1.5em;
+}
+.texteArticle{
+    flex: 9;
+    text-align: justify;
+    padding: 0 1em;
+}
+aside{
+    display: flex;
+    flex: 1;
+    border: 1px solid blue;
+    border-radius: 6px;
+    padding: 0 0.5em;
+    align-items: center;
+}
+/************************** FOOTER ***************************/
