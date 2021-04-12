@@ -3,6 +3,7 @@
 class Enfant{
 
     /*****************Attributs***************** */
+    private $_idEnfant;
     private $_nom;
     private $_prenom;
     private $_age;
