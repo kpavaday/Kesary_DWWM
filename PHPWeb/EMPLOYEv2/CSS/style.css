@@ -1,0 +1,23 @@
+body{
+    background-color: #6e7c7c;
+}
+header{
+    height: 20vh;
+    background-color: #bbbbbb;
+}
+h1{
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+footer{
+    height: 20vh;;
+    background-color: #bbbbbb;
+}
+h2{
+    position: relative;
+    top: 40%;
+    text-align: center;
+    font-size: 0.8em;
+
+}
