@@ -1,0 +1,10 @@
+body{
+    background-color: cadetblue;
+}
+p{
+    font-size: 2em;
+}
+.classePersonne{
+    background-color: yellowgreen;
+    border: 10px solid red;
+}
