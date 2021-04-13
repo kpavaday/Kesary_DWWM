@@ -84,7 +84,7 @@ header{
 }
 .contenu2Gauche{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
 .contenu2Texte{
     font-size: 1.2em;
@@ -92,20 +92,27 @@ header{
     text-align: justify;
     line-height: 2.5vh;
     display: flex;
-    flex: 3;
+    flex: 2;
+    
 }
 .espaceContenu2{
+    display: flex;
     flex: 0.08;
     background-color: white;
 }
+.photoGauche{
+    background-image: url(./img/Forrester_Reduit_Cut.jpg);
+    background-size: cover;
+    height: 50%;
+}
 .contenu2Photo{
-    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     border: 1px solid #bb8c00;
     background-color:#bb8c00 ;
 }
-img{
-    width: 100%;
-} 
+
 .contenu2PhotoTexte1{
     text-transform: uppercase;
     text-align: center;

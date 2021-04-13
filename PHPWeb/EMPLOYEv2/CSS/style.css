@@ -1,5 +1,9 @@
 body{
-    background-color: #6e7c7c;
+    /* background-color: #6e7c7c; */
+    background-color: red;
+}
+img{
+    width: 50%;
 }
 header{
     height: 20vh;
