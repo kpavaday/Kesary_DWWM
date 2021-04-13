@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #F1E3C7;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 80vw;
+   
+    
+}
+/*-------------------------HEADER----------------------------------------*/
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+.espace{
+    height: 2vh;
+    background-color: white;
+}
+.intro{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+.headerGauche{
+    flex: 2.8;
+}
+.texteGauche{
+    font-size: 1.25em;
+    padding: 2vh 10vh 3vh 3vh;
+    text-align: justify;
+}
+.headerDroite{
+    border: 1PX solid black;
+    border-radius: 20px;
+    padding: 2vh;
+}
+.texteDroite{
+    font-size: 1.3em;
+    
+}
+.espaceDroite{
+    height: 1vh;
+    background-color: white;
+}
+.listeDroite{
+    color: #006633;
+    padding-left: 3vh;
+    font-size: 1em;
+    line-height: 2.5vh;
+}
+.listeDroite li{
+    list-style-type:circle;
+}
+/*------------------------------CONTENU-----------------------*/
+.contenu{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+.contenuGauche{
+    flex:1;
+    background-color: green;  
+}
+.contenuDroite{
+    flex: 1;
+    background-color: hotpink; 
+    height: 50vh; 
+}
+.contenu2Gauche{
+    display: flex;
+    flex-direction: row;
+}
+.contenu2Texte{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 2.5vh;
+    display: flex;
+    flex: 3;
+}
+.espaceContenu2{
+    flex: 0.08;
+    background-color: white;
+}
+.contenu2Photo{
+    flex: 1.2;
+    border: 1px solid #bb8c00;
+    background-color:#bb8c00 ;
+}
+img{
+    width: 100%;
+} 
+.contenu2PhotoTexte1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding-bottom: 1.3vh;
+}
+.contenu2PhotoTexte2{
+    font-weight: lighter;
+    font-size: 0.7em;
+    text-align: center;
+    
+}
+.espaceEntre{
+    flex: 0.02;
+    background-color: white;
+}
