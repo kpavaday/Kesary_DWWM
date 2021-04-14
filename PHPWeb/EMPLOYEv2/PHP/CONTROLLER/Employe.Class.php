@@ -35,7 +35,7 @@ class Employe{
     public function setFonction($fonction){$this->_fonction = $fonction;}
     public function setSalaire($salaire){$this->_salaire = $salaire;}
     public function setService($service){$this->_service = $service;}
-    public function setNbreEnfants(array $nbreEnfants){$this->_nbreEnfants = $nbreEnfants;}
+    // public function setNbreEnfants(array $nbreEnfants){$this->_nbreEnfants = $nbreEnfants;}
     public function setIdEmploye($idEmploye){$this->_idEmploye = $idEmploye;}
     public function setIdAgence($idAgence){$this->_idAgence = $idAgence;}
 

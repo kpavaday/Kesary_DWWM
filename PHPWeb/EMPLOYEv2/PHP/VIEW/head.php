@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../../CSS/style.css">
     <title>Gestion des employés</title>
     <?php
-    if (file_exists("../../CSS/style.css")){
-            echo '<link rel="stylesheet" href="">'; // quand on vient de index.php
+    if (file_exists("./CSS/style.css")){
+            echo '<link rel="stylesheet" href="./CSS/style.css">'; // quand on vient de index.php
         }else if (file_exists("../../CSS/style.css")){
             echo '<link rel="stylesheet" href="../../CSS/style.css">';  // quand on vient du dossier VIEW
         }

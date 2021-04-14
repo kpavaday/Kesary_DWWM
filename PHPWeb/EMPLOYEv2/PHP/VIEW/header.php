@@ -1,6 +1,6 @@
 <body class="colonne">
 <header>
-<div>
+<div> 
         <?php    
         if (file_exists("IMG/Logo_Afpa.jpg"))
         {

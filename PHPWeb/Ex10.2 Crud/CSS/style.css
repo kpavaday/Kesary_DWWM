@@ -5,6 +5,7 @@ body, div, header, footer{
 }
 img{
     width: 100%;
+    border: 1px solid red;
 }
 .colonne{
     flex-direction: column;

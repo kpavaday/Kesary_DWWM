@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #bdc7c9;
+}
+img{
+    height: 10vh;
+    position: relative;
+    left: 48%;
+    margin-top: 8vh;
+
+}
+.titre{
+    font-size: 2em;
+    letter-spacing: 2px;
+    position:relative;
+    top: 10%;
+    left: 42%;
+
+   
+}

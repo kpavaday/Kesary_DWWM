@@ -2,19 +2,19 @@
 $listeEnfants = EnfantsManager::getList();
 
 echo '<div class="liste colonne">';
-echo '<a href="PHP/VIEW/FormClient.php?mode=ajout"> <button>Ajouter</button></a>';
+echo '<a href="PHP/VIEW/FormEnfant.php?mode=ajout"> <button>Ajouter</button></a>';
   
 if (count($listeEnfants)>0)
 {
-    foreach ($listeEnfants as $unenfant)
+    foreach ($listeEnfants as $unEnfant)
     {
-        echo '<div> <div class = "client">' . $unEnfant->getNom() . ' ' . $unClient->getPrenomClient() . '</div>';
+        echo '<div> <div class = "enfant">' . $unEnfant->getNom(). ' ' . $unEnfant->getPrenom() . '</div>';
         echo '<div class="btn">
-   <a href="PHP/VIEW/FormClient.php?mode=detail&id=' . $unClient->getIdClient() . '"> <button>Détail Formulaire</button></a>
+   <a href="PHP/VIEW/FormEnfant.php?mode=detail&id=' . $unEnfant->getIdEnfant() . '"> <button>Détail Formulaire</button></a>
     <div class="mini"></div>
-    <a href="PHP/VIEW/FormClient.php?mode=modif&id=' . $unClient->getIdClient() . '"> <button>Modifier</button></a>
+    <a href="PHP/VIEW/FormEnfant.php?mode=modif&id=' . $unEnfant->getIdEnfant() . '"> <button>Modifier</button></a>
     <div class="mini"></div>
-    <a href="PHP/VIEW/FormClient.php?mode=supression&id=' . $unClient->getIdClient() . '"> <button>Supprimer</button></a>
+    <a href="PHP/VIEW/FormEnfant.php?mode=supression&id=' . $unEnfant->getIdEnfant() . '"> <button>Supprimer</button></a>
     </div></div>';
     }
 }

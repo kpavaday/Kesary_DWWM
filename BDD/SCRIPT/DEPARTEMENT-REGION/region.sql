@@ -4,24 +4,20 @@ CREATE DATABASE IF NOT EXISTS region;
 
 USE region;
 
-#------------------------------------------------------------
-# Table: Departement
-#------------------------------------------------------------
-CREATE TABLE Departement(
+CREATE TABLE Departements(
     idDepartement Int Auto_increment NOT NULL PRIMARY KEY,
-    nomDepartement Varchar (250) NOT NULL,
-    idRegion Int NOT NULL
-) ENGINE = InnoDB;
-
-#------------------------------------------------------------
-# Table: Region
-#------------------------------------------------------------
-CREATE TABLE Region(
-    idRegion Int Auto_increment NOT NULL PRIMARY KEY ,
-    nomRegion Varchar (250) NOT NULL,
-    numRegion Int NOT NULL,
-    nbDepartement INT NOT NULL
+    numeroDepartement Varchar (250) NOT NULL,
+    libelleDepartement Varchar NOT NULL,
+    idRegion INT NOT NULL
 ) ENGINE = InnoDB;
 
 
-ALTER TABLE Departement ADD CONSTRAINT FK_Departement_Region FOREIGN KEY (idRegion) REFERENCES Region(idRegion);
+CREATE TABLE Regions(
+    idRegion INT Auto_increment NOT NULL PRIMARY KEY ,
+    libelleRegion Varchar (250) NOT NULL,
+    numeroRegion INT NOT NULL,
+    nombreDépartement INT NOT NULL
+) ENGINE = InnoDB;
+
+
+ALTER TABLE Departements ADD CONSTRAINT FK_Departements_Regions FOREIGN KEY (idRegion) REFERENCES Regions(idRegion);
