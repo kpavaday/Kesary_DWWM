@@ -1,0 +1,53 @@
+/****  GENERAL ****/
+html, body {
+	margin : 0;
+	padding : 0;
+    background-color: cadetblue;
+}
+
+div, header, footer, nav, article {
+	display : flex;
+	flex : 1;
+	justify-content: center;
+    flex-direction: column;
+}
+
+img, video {
+	width : 100%;
+}
+.colonne{
+	flex-direction: column;
+}
+.colonne a{
+    color:black;
+    position: absolute;
+    left: 45%;
+    top: 25vh;
+    text-decoration: none;
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 10px;   
+}
+.colonne a:hover{
+    color: white;
+}
+
+.titre{
+	flex: 5;
+	font-size : 2em;
+	align-items: center;
+}
+.demi{
+	flex: 0.5;
+}
+.espaceHor{
+	flex: none;
+	height:3vh;
+}
+.itemsCenter{
+	align-items: center;
+}
+.connect{
+    display: flex;
+    flex-direction: column;
+}

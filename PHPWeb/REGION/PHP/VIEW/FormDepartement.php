@@ -31,16 +31,15 @@ if ($mode != "ajout")
     </div>
 
     
-    <div class="btn">
+    <div class="btn"> -->
     <?php
-    switch ($mode)
-    {
+    switch ($mode){
         case "ajout": echo' <button type="submit">Ajouter</button>'; break;
         case "modif": echo' <button type="submit">Modifier</button>'; break;
         case "supression": echo' <button type="submit">Supprimer</button>'; break;
-    
     }
     echo '
-    <button type="reset"><a href="../../index.php">Annuler</a></button>
-    </div>
-</form>';
+     <button type="reset"><a href="../../index.php">Annuler</a></button>
+     </div>
+     </form>';
+?>

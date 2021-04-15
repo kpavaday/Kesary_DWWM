@@ -34,9 +34,10 @@ function AfficherPage($page)
     $nom = $page[1];
     $titre = $page[2];
 
+    include "PHP/VIEW/SelectDepartement.php";
     include 'PHP/VIEW/head.php';
     include 'PHP/VIEW/header.php';
-    // include 'PHP/VIEW/Nav.php';
+    //include 'PHP/VIEW/Nav.php';
     include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
     include 'PHP/VIEW/footer.php';
 }
@@ -47,18 +48,18 @@ DbConnect::init();
 /* création d'u tableau de redirection, en fonction du codePage, on choisit la page à afficher */
 $routes = [
     "default" => ["PHP/VIEW/", "listeDepartements", "Liste des départements"],
-    "listeRegions" => ["PHP/VIEW/", "listeRegions", "Liste des régions"],
-    "FormDepartement"=> ["PHP/VIEW/", "FormDepartement", "Détail département"],
-    "ActionDepartement" => ["PHP/VIEW/", "ActionDepartement", "Mise à jour du département"],
-    "FormRegion" => ["PHP/VIEW/", "FormRegion", "Détail de la région"],
-    "ActionRegion" => ["PHP/VIEW/", "ActionRegion", "Mise à jour de la Region"],
+    "listeRegions" => ["./PHP/VIEW/", "listeRegions", "Liste des régions"],
+    "FormDepartement"=> ["./PHP/VIEW/", "FormDepartement", "Détail département"],
+    "ActionDepartement" => ["./PHP/VIEW/", "ActionDepartement", "Mise à jour du département"],
+    "FormRegion" => ["./PHP/VIEW/", "FormRegion", "Détail de la région"],
+    "ActionRegion" => ["./PHP/VIEW/", "ActionRegion", "Mise à jour de la Region"],
 
 ];
 
-if (isset($_GET["codePage"]))
+if (isset($_GET["page"]))
 {
 
-    $codePage = $_GET["codePage"];
+    $codePage = $_GET["page"];
 
     //Si cette route existe dans le tableau des routes
     if (isset($routes[$codePage]))

@@ -11,7 +11,7 @@ body{
     background-color: #bdc7c9;
 }
 img{
-    height: 10vh;
+ height: 15vh;
     position: relative;
     left: 48%;
     margin-top: 8vh;
@@ -22,7 +22,5 @@ img{
     letter-spacing: 2px;
     position:relative;
     top: 10%;
-    left: 42%;
-
-   
+    left: 42%;  
 }

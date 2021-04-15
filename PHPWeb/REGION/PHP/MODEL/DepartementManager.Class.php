@@ -16,7 +16,7 @@ class DepartementManager{
         $requete->bindValue(":numeroDepartement", $departement->getNumeroDepartement());
         $requete->bindValue(":libelleDepartement", $departement->getLibelleDepartement());
         $requete->bindValue(":idRegion", $departement->getIdRegion());
-        $requete->bindValue(":idDepartement", $cl->getIdDepartement());
+        $requete->bindValue(":idDepartement", $departement->getIdDepartement());
         $requete->execute();
     }
 

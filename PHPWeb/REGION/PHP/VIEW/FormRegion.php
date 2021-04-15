@@ -10,7 +10,7 @@ if ($mode != "ajout")
 ?>
 <form action="ActionRegion.php?mode=<?=$mode?>" method="post">
 
-   <?php if ($mode!="ajout") echo '<input type="text" name="idRegion" value="'. $region->getIdRegion().'"  hidden/> ';?>
+    <?php if ($mode!="ajout") echo '<input type="text" name="idRegion" value="'. $region->getIdRegion().'"  hidden/> ';?>
 
     <div>
         <label for="libelleRegion">Région : </label>
@@ -30,7 +30,7 @@ if ($mode != "ajout")
                         <?php if($mode == "detail" || $mode == "supression") echo "disabled"?>/>
     </div>
     
-    <div class="btn">
+    <div class="btn"> -->
     <?php
     switch ($mode)
     {
@@ -42,4 +42,4 @@ if ($mode != "ajout")
     echo '
     <button type="reset"><a href="../../index.php">Annuler</a></button>
     </div>
-</form>';
+  </form>';
