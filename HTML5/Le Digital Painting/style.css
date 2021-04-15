@@ -15,8 +15,9 @@ html, body, div{
 body{
     flex: none;
     flex-direction: column;
-    width: 50%;
+    width: 42%;
 }
+/*-------------------------HEADER-------------------------------------*/
 
 .container{
     padding-top: 5vh;
@@ -30,19 +31,51 @@ header{
     flex-direction: row;
 }
 .espaceCote{
-    flex: 0.38;
+    display: flex;
+    flex: 0.3;
+    background-color: blue;
 }
 .titreHeader{
-    flex: 3;   
+    flex: 4;
+    justify-content: left;   
 }
 h1{
     color: white;
-    font-size: 4em;  
-    position: relative;
-    left: -26%;
+    font-size: 4em;
+    font-family: 'DM Serif Display', serif; 
+     
 }
 .espaceBottom{
     background-color: red;
-    height: 4vh;
+    height: 2vh;
     flex: none;    
+}
+/*----------------------------SECTION 1------------------------------*/
+.texte{
+    display: flex;
+    flex-direction: row;
+}
+.texte1{
+    flex: 4;
+    color: #fefefe;
+    line-height: 30px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 0.9em;
+    text-align: justify;
+}
+/*---------------------------SECTION 2------------------------------*/
+.sousTitre{
+    display: flex;
+    flex-direction: row;
+}
+.sousTitre1{
+    display: flex;
+    flex: 4;
+    justify-content: left;   
+}
+h2{
+    color: black;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5em;
+    font-weight: bold;
 }
