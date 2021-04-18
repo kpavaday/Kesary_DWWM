@@ -1,0 +1,45 @@
+
+html,body,div,main{
+    display: flex;
+    flex: 1;
+    justify-content: center;   
+}
+.colonne{
+    flex-direction: column;
+}
+.mini{
+    flex: 0.02;
+    background-color: crimson;
+}
+.triple{
+    flex: 3;
+    justify-content: space-between;
+}
+
+.espaceHor{
+    flex: none;
+    height: 2vh;
+    background-color: red;
+}
+.fond{
+    background-color: cyan;
+}
+
+.vert{
+    background-color: greenyellow;
+    height: 50vh;
+}
+.bleu{
+    background-color: blue;
+}
+.violet{
+    background-color: blueviolet;
+}
+.orange{
+    background-color: coral;
+}
+
+
+
+
+

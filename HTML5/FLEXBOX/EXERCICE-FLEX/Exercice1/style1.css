@@ -1,0 +1,47 @@
+html,body,main,div{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+div{
+    font-size: 1.3em;
+    text-align: justify;
+
+    color: white;
+}
+.colonne{
+    flex-direction: column;
+}
+.mini{
+    flex: 0.2;
+ 
+}
+.triple{
+    flex: 3;
+}
+.double{
+    flex: 2;
+}
+.espaceHorizontal{
+
+    flex: none;
+    height: 5vh;
+}
+.bleu{
+    background-color:cadetblue;
+}
+.orange{
+    background-color: orange;
+
+}
+.gris{
+    background-color: gray;
+}
+.jaune{
+    background-color: yellow;
+    color: black;
+}
+.vert{
+    background-color: green;
+
+}

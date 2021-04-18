@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html,body,div,main{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.img{
+    width: 100%;
+}
+.colonne{
+    flex-direction: column;
+}
+.triple{
+    flex: 3;
+}
+.espaceHor{
+    flex: none;
+    height: 5vh;
+   
+}
+.mini{
+    flex: 0.2;
+
+}
+.miniMini{
+    flex: 0.8;
+}
+header{
+    display: flex;
+}
+.logo{
+    justify-content: left;
+}
+.sideBar{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    
+}
+.navigation{
+    flex: 0.4;
+}
+.miniBar{
+    flex: 5;
+    color: yellow;
+}
+.miniNav{
+    flex: 0.3;
+    background-color: tomato;
+}
+.nav{
+    text-align: left;
+    justify-content: left;
+}
+a{
+    color: white;
+    font-size: 1.5em;
+    line-height: 40px;
+    
+}
+
+

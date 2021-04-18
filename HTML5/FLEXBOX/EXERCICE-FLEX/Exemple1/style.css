@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html,body,main,div{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+div{
+    background-color: white;
+}
+
+div:nth-child(1){
+    background-color:#1abc9c ;
+}
+div :nth-child(2){
+    background-color:#3498db ;
+}
+div :nth-child(3){
+    background-color:#9b59b6 ;
+}
+div :nth-child(4){
+    background-color:#e67e22 ;
+}
+div :nth-child(5){
+    background-color:#e74c3c ;
+}
+div :nth-child(6){
+    background-color:#1abc9c ;
+}
+div :nth-child(7){
+    background-color:#3498db ;
+}
+div :nth-child(8){
+    background-color:#9b59b6 ;
+}
+div :nth-child(9){
+    background-color:#e67e22 ;
+}
+.cercle{
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 54%;
+    display: block;
+    font-size: 2em;
+    height: 10vh;
+    line-height: 3em;
+    text-align: center;
+    width: 3em;
+    z-index: 2;
+}

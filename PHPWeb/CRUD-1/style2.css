@@ -1,0 +1,62 @@
+html,body,div{
+    display: flex;
+    flex-direction: column;
+    background-color: #6e7c7c;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    width: 50%;
+}
+.titrePage{
+
+    flex: 3;
+}
+.espaceHor{
+    flex: none;
+    height: 20vh;
+}
+.titre{
+    color: red;
+    font-size: 1.8em;
+    position: absolute;
+    top: 7%;
+    left: 41%;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.liste{
+    display: flex;
+    flex:1;
+}
+.liste{
+    display: flex;
+    flex-direction: row;
+}
+.mini{
+    flex:3;
+    /* background-color: teal; */
+}
+.afficheClient{
+    flex: 3;
+}
+.client{
+    flex: 3;
+    border: 1px black solid;
+    padding: 2em;
+    background-color: #364547;
+    /* background-color:b rgb(136, 136, 216); */
+}
+.btn{
+    align-items: center;
+}
+label{
+    background-color: tomato;
+    flex: 0.1;
+}
+
+

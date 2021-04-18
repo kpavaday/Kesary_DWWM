@@ -1,0 +1,72 @@
+
+html,body,div{
+   
+    display: flex;
+    flex-direction: column;
+}
+body{
+    background-color: #6e7c7c;
+}
+.espaceHor{
+    flex: none;
+    height: 2vh;
+}
+.titre{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    width: 50%;
+}
+
+
+.leTitre{
+    flex: 3;
+    font-size: 2em;
+    color:greenyellow;  
+    position: absolute;
+    left: 33%;
+    top: 0;
+}
+.sideBar{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.mini{
+    flex: 0.3;
+    background-color: black;
+}
+.gauche{
+    flex: 2;
+    flex-direction: row;
+    background-color: black;
+    height: 5vh;
+}
+.data{
+    flex: 1;
+    background-color: black;
+    /* height: 3vh; */
+    color: white;
+    align-items: left;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    justify-content: center;
+}
+.droite{
+    flex: 3;
+    background-color: black;
+    justify-content: center;
+    
+}
+.actions{
+    color: white;
+    align-items: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    justify-content: center;
+
+}
+.name{
+    margin-left: 50px;
+}
