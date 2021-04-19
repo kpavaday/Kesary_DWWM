@@ -1,0 +1,73 @@
+html,body,div,main,nav{
+    justify-content: center;
+    flex: 1;
+}
+div{
+    display:flex;  
+}
+.colonne{
+    flex-direction: column;
+}
+.espaceHor{
+    flex: none;
+    height: 1vh;
+    background-color: #0a6290;
+}
+.espaceHorizon{
+    flex: none;
+    height: 5vh;
+}
+.espaceVer{
+    flex: 1;
+    background-color: tomato;
+}
+.triple{
+    flex: 3;
+}
+
+/*---------------------------BAR MENU----------------------------*/
+img{
+    width: 100%;
+}
+.image{
+    flex: 0.2;
+}
+.navMenu{
+   flex: 3;
+   justify-content: left;
+}
+.menu{
+    font-size: 1.3em;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0A6290;
+}
+/*-----------------------------HEADER----------------------------*/
+.enTete{
+    background-image: url(./img/esat-ttg-02.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+h1{
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 89%;
+    left: 35%;
+}
+.imageDown{
+    width: 5%;
+    position: absolute;
+    top: 98%;
+    left: 48%;
+}
+/*-------------------------------SECTION MAIN--------------------------*/
+main{
+    background-color: #e5ebf7;
+}
+
+
+
