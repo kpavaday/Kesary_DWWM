@@ -6,8 +6,8 @@ function afficherPage($page){
     include "PHP/VIEW/Head.php";
     include "PHP/VIEW/Header.php";
     include "PHP/VIEW/ListeClients.php";
-//  include $chemin.$nom.".php";
- include "PHP/VIEW/Footer.php";    
+    include $chemin.$nom.".php";   
+    include "PHP/VIEW/Footer.php";    
 }
 // include "PHP/VIEW/Head.php";
 // include "PHP/VIEW/Header.php";
