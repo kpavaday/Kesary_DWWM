@@ -1,7 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
 html,body,div,main,nav{
     justify-content: center;
     flex: 1;
 }
+
 div{
     display:flex;  
 }
@@ -18,11 +29,16 @@ div{
     height: 5vh;
 }
 .espaceVer{
-    flex: 1;
-    background-color: tomato;
+    flex: 1;   
 }
 .triple{
-    flex: 3;
+    flex: 8;
+}
+.mini{
+    flex: 0.3;
+}
+.miniCentral{
+    flex: 0.05;
 }
 
 /*---------------------------BAR MENU----------------------------*/
@@ -37,7 +53,7 @@ img{
    justify-content: left;
 }
 .menu{
-    font-size: 1.3em;
+    font-size: 1em;
     align-items: center;
     font-weight: bold;
     text-transform: uppercase;
@@ -56,18 +72,68 @@ h1{
     letter-spacing: 2px;
     position: absolute;
     top: 89%;
-    left: 35%;
+    left: 32%;
 }
 .imageDown{
-    width: 5%;
+    width: 3%;
     position: absolute;
-    top: 98%;
+    top: 100%;
     left: 48%;
 }
 /*-------------------------------SECTION MAIN--------------------------*/
 main{
     background-color: #e5ebf7;
 }
+.duMilieu{
+    background-color: white;
+    box-shadow: 2px 2px 15px grey ;
+}
+.content1{
+    flex: 8;
+}
+h2{
+    color: #09629F;
+    font-size: 1.2em;
+}
+.sousTitre1{
+    justify-content: left;
+}
+.sousTitre{
+    justify-content: left;
+    display: flex;
+    flex: 1;
+}
+p{
+    font-size: 1.3em;
+
+}
+.paragraphe{
+    justify-content: left;
+}
+.para{
+    justify-content: left;
+}
+.para2{
+    display: flex;
+    flex: 2;
+}
+
+.content2{
+    display: flex;
+}
+.photo{
+    box-shadow: 2px 2px 15px grey ;
+}
+.liste{
+    justify-content: left;
+    padding-left: 50px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+
+
+
 
 
 
