@@ -5,23 +5,18 @@ var compteur = 0;
 
 var readline = require("readline-sync");
 var saisie = readline.question("Entrez un nombre: ");
-compteur = compteur +1;
-maxi = saisie;
+var compteur = compteur +1;
+var maxi = saisie;
 
-// if(maxi < saisie){
-//     maxi = saisie;
-//     var position = compteur;
-// }
 while(saisie != 0){
-    var readline = require("readline-sync");
-    var saisie = readline.question("Entrez un nombre: ");
-    compteur = compteur +1;
+    //var readline = require("readline-sync");
+    var saisie = parseInt(readline.question("Entrez un nombre: "));
+    compteur++;
     if(maxi < saisie){
         maxi = saisie;
-        console.log(maxi)
-        var position = compteur;
-        console.log(compteur);
+        position = compteur;
     }
 }
+
 console.log("La valeur max est : " + maxi);
 console.log("Sa position est : " + position);
