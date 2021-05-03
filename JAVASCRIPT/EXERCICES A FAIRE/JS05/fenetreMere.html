@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice JS05- Fenêtre mère</title>
+    <script type="text/Javascript">
+
+        function new_window(){
+		nouvelle_fenetre=open('fenetreFille.html', 'new', 'width=250 , height=200, toolbar=no, location=no, directories=no, status=no, menubar=no, scroolbars=no, resizable=no, top=300, left=400');
+	 }
+
+     function deplacer(){
+         nouvelle_fenetre.focus();
+         nouvelle_fenetre.moveBy(20,0);
+
+     }
+
+     function reduire(){
+         var largeur = (nouvelle_fenetre.document.body.offsetWidth /5)*4;
+         var hauteur = (nouvelle_fenetre.document.offsetHeight /5)*4;
+         nouvelle_fenetre.resizeTo(largeur,hauteur);
+     }
+
+    </script>
+</head>
+<body>
+    <p>Cliquez sur l'image pour ouvrir une nouvelle fenêtre</p>
+    <p><img onclick=new_window() src="ATTENT.JPG" alt=""></p>
+    <br>
+    <br>
+    <p>Cliquez sur le bouton pour fermer la nouvelle fenêtre</p>
+    <p><input onclick='nouvelle_fenetre.close()' type="button" value="Fermer la nouvelle fenêtre" id=button1 name=button1></p>
+    <p><input  type="button" value="deplacer" onclick=deplacer() id=button2 name=button2></p>
+    <p><input type="button" value="Reduit" id=button3 name=button3 onclick=reduire()></p>
+    
+</body>
+</html>
