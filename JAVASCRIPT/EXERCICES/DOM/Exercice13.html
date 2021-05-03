@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 13</title>
+</head>
+<body>
+    <button onclick="incrementer()"> Incrementer !</button>
+    <div>Cliquer sur le bouton pour incrementer !</div>
+
+    <script>
+        var nbClic =0;
+        const monDiv = document.querySelector("div");
+        function incrementer(){
+            nbClic++;
+            monDiv.innerHTML = "Vous avez cliqué " + nbClic + " fois";
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice14</title>
+</head>
+<body>
+    <button>Table de 3</button>
+    <div>Cliquer sur un bouton pour afficher la table de multiplication</div>
+
+    <script>
+        //On récupère l'élément button
+        const monButton = document.querySelector("button");
+        const divResultat = document.querySelector("div");
+
+        //Lorsque l'on clique sur le bouton
+        //function anonyme qui va s'executer lorsqu'on aura cliqué sur un bouton
+        monButton.addEventListener("click", function(){
+            var txt = "";
+            for(var i=1;i<=10;i++){
+                txt += "3 * " + i + " = "+ (3*i) + "<br/>";
+            }
+            divResultat.innerHTML = txt;
+
+        }); 
+
+
+    </script>
+</body>
+</html>
