@@ -16,7 +16,7 @@ suppression.addEventListener('click', suppr);
 
     
 function suppr(){
-    var cible = document.getElementById("idDessert");
+    var cible = document.querySelectorAll(".idDessert");
     cible.remove();
    
 }
