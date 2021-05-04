@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Veuillez sélectionner vos intérêts :</legend>
+        <div>
+           checkbox : <input type="checkbox" id="coding" name="checkbox" >
+          <label for="music" >Musique</label>
+          <!-- <p id="demo"></p> -->
+        </div>
+      </fieldset>
+
+<script>
+    var verif = document.querySelector("input[name=checkbox]");
+
+    verif.addEventListener('change',function(){
+        if(this.checked){
+            alert("Box check");
+        }else{
+            alert("Box not check");
+        }
+        
+    });
+
+</script>
+</body>
+</html>
