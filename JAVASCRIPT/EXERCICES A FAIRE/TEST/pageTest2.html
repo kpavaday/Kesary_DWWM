@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+            window.addEventListener("keydown", function(event) {
+        if (event.defaultPrevented) {
+          return;
+        }
+        if (event.code === "ArrowDown"){
+            // Handle "down"
+            updateYPosition(-moveRate);
+        } else if (event.code === "ArrowUp"){
+            // Handle "up"
+            updateYPosition(moveRate);
+        } else if (event.code === "ArrowLeft"){
+            // Handle "left"
+            updateXPosition(-moveRate);
+        } else if (event.code === "ArrowRight"){
+            // Handle "right"
+            updateXPosition(moveRate);
+        }
+        refreshPosition();
+        event.preventDefault();
+      }, true);
+
+    </script>
+
+    
+</body>
+</html>
