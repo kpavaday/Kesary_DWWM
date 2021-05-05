@@ -1,8 +1,16 @@
-.balise{
+#carre{
     height: 5vh;
     width: 5vh;
     background-color: tomato;
     position: absolute;
     top: 150px;
     left: 150px;
+}
+#obstacle{
+    height: 60vh;
+    width: 5vh;
+    background-color: teal;
+    position: absolute;
+    top: 30%;
+    left: 55%;
 }

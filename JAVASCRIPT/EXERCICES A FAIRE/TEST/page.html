@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Test</title>
+<title>TEST</title>
+<style type="text/css">
+#cadre{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+</style>
 </head>
 <body>
-    <a href="page.html" title="Voir la page"></a>
-    <!-- <script>alert("Hello l'AFPA!!");</script> -->
-    <p>Page de test!</p>
+<div id="cadre"></div>
+<script type="text/javascript">
 
-    <script src="script.js"></script>
+var cadre = document.getElementById('cadre'),
+    s = cadre.style, // Un petit raccourci
+    i = cadre.offsetLeft, // On récupère la position absolue initiale.
+    j = cadre.offsetTop;
+
+document.onkeydown = function(event){
+    var event = event || window.event,
+        keyCode = event.keyCode;
+     
+    // On détecte l'événement puis selon la fleche, on incrémente ou décrément les variables globales de position, i et j.
+    switch(keyCode){
+    case 38:
+        j--;
+        break;
+    case 40:
+        j++;
+        break;
+    case 37:
+        i--;
+        break;
+    case 39:
+        i++;
+        break;
+    }
+    // Et enfin on applique les modifications :
+    s.left = String(i)+'px';
+    s.top = String(j)+'px';
+}
+</script>
 </body>
 </html>
